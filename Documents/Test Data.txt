@@ -1,0 +1,124 @@
+== Role ==
+1. Администратор
+2. Закупщик
+3. Распространитель
+4. Продавец
+
+== User ==
+1. Андрей					Inactive
+2. Гость					Active
+3. Евгения 					Active
+
+== UserRole ==							User	Role
+1.							Active		1		1
+2.							Inactive	1		2
+3.							Inactive	1		3
+4.							Inactive	1		4
+5.							Inactive	2		1
+6.							Inactive	2		2
+7.							Inactive	2		3
+8.							Inactive	2		4
+9.							Active		3		1
+10.							Active		3		2
+11.							Active		3		3
+12.							Active		3		4
+13.							Inactive	4		1
+14.							Inactive	4		2
+15.							Active		4		3
+16.							Inactive	4		4
+17.							Inactive	5		1
+18.							Inactive	5		2
+19.							Active		5		3
+20.							Active		5		4
+
+== Category ==
+1. Дети						Active
+2. Мужчины					Inactive
+3. Женщины					Active
+
+== SubCategory ==						Category
+1. Девочки (0-24 мес)		Active		1
+2. Девочки (2-5 лет)		Active		1
+3. Девочки (5-12 лет)		Active		1
+4. Мальчики (0-24 мес)		Active		1
+5. Мальчики (2-5 лет)		Active		1
+6. Мальчики (5-12 лет)		Active		1
+7. Аксессуары				Inactive	2
+8. Верхняя одежда			Active		2
+9. Повседневная одежда		Active		2
+10. Аксессуары				Inactive	3
+11. Верхняя одежда			Active		3
+12. Повседневная одежда		Active		3
+
+== Brand ==
+1. OshKosh					Active
+2. Carter's					Active
+3. Crazy 8					Inactive
+4. The Children's Place		Active
+
+== Size ==								Brand	SubCategory
+1. newborn					Inactive	4		4
+2. 0-3 months				Active		4		4
+3. 3-6 months				Active		4		4
+4. newborn					Inactive	4		1
+5. 0-3 months				Active		4		1
+6. 3-6 months				Active		4		1
+7. 3M						Active		2		4
+8. 6M						Active		2		4
+9. 3M						Active		2		1
+10. 6M						Active		2		1
+
+== Product ==							Brand	SubCategory
+1. Свитер детский (м)		Active		4		4
+2. Шорты					Active		2		4
+3. Майка					Inactive	4		4
+4. Свитер детский (ж)		Active		4		1
+5. Шорты					Active		4		1
+
+== ProductSize ==						Product	Size
+1.							Active		1		2
+2. 							Active		1		3
+3. 							Inactive	4		5
+4. 							Active		4		6
+
+== Parcel ==							Distributor
+1.										4	
+2.										5
+3.										null
+
+== Order ==								Parcel	CreatedBy
+1.							Active		1		3		
+2.							Active		1		3
+3.							Active		null	3
+4.							Inactive	3		5
+5.							Active		3		3
+6.							Inactive	2		5		
+7.							Active		2		5
+8.							Active		2		3
+
+== OrderItem ==							Order ProductSize
+1.							Active		3	  1 	
+2.							Active		1	  3
+3.							Active		2	  1
+4.							Active		2	  4
+5.							Inactive	1	  2 	
+6.							Active		1	  4
+7.							Active		4	  2
+8.							Active		5	  1 	
+9.							Active		6	  3
+10.							Active		7	  1
+11.							Active		8	  4
+12.							Inactive	7	  2 	
+13.							Active		6	  4
+14.							Active		4	  1
+
+== ActionLogType == 
+1. Пользователь создан
+2. Пользователь изменен
+3. Пользователь сменил пароль
+
+== ActionLog ==							Document	ActionLogType
+1. Пользователь chyuck создан			1			1
+2. Пользователь chyuck изменен			1			2
+3. Пользователь jenya создан 			2			1
+4. Пользователь jenya сменил пароль 	2			3

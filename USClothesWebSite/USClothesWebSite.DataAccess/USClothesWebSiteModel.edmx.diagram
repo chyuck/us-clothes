@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3cd39f2a10a4436eadc89a574295b682" Name="UsClothesWebSiteDiagram" ZoomLevel="74">
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.ActionLog" Width="1.5" PointX="16.625" PointY="10" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.ActionLogType" Width="1.5" PointX="19.625" PointY="9.875" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Brand" Width="1.5" PointX="10.125" PointY="0.5" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Category" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Product" Width="1.75" PointX="10.5" PointY="8.625" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.ProductSize" Width="1.5" PointX="7.375" PointY="9" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Role" Width="1.5" PointX="20.5" PointY="5.125" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Session" Width="1.5" PointX="11" PointY="15.25" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.ShoppingCart" Width="1.5" PointX="7.5" PointY="14.625" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Size" Width="1.5" PointX="6.75" PointY="0.5" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.SubCategory" Width="1.5" PointX="3.5" PointY="0.5" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.User" Width="1.5" PointX="14.875" PointY="4.25" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.UserRole" Width="1.5" PointX="17.875" PointY="0.875" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ActionLog_ActionLogType" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ActionLog_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Brand_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Brand_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Product_Brand" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Size_Brand" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Category_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Category_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_SubCategory_Category" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Product_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Product_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Product_SubCategory" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_Product" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_Size" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_ProductSize" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_UserRole_Role" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_Session" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Size_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Size_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Size_SubCategory" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_SubCategory_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_SubCategory_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_User_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_User_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_UserRole_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_UserRole_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_UserRole_User" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Settings" Width="1.5" PointX="13.125" PointY="10.75" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Settings_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Settings_CreateUser" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.OrderItem" Width="1.5" PointX="4.75" PointY="9.5" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Parcel" Width="2.375" PointX="1.75" PointY="16.375" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_ProductSize" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Parcel_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Parcel_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Parcel_Distributor" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.Order" Width="2.25" PointX="1.5" PointY="8.25" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Order_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Order_CreateUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_Order_Parcel" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_Order" />
+        <EntityTypeShape EntityType="USClothesWebSite.DataAccess.Model.DistributorTransfer" Width="2.25" PointX="12.75" PointY="20" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_DistributorTransfer_ChangeUser" />
+        <AssociationConnector Association="USClothesWebSite.DataAccess.Model.FK_DistributorTransfer_CreateUser" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

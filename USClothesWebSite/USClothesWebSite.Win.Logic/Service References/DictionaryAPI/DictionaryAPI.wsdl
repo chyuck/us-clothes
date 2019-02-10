@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://usclothes.ru/webservice/dictionaryapi" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://usclothes.ru/webservice/dictionaryapi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://usclothes.ru/webservice/dictionaryapi/Imports">
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DictionaryAPI.svc?xsd=xsd0" namespace="http://usclothes.ru/webservice/dictionaryapi" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DictionaryAPI.svc?xsd=xsd3" namespace="http://usclothes.ru/dto/errordata" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DictionaryAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DictionaryAPI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDictionaryAPI_GetBrands_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrands" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetBrands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetBrands_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://usclothes.ru/dto/errordata" name="detail" element="q1:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBrand" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateBrand_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://usclothes.ru/dto/errordata" name="detail" element="q2:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBrand" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateBrand_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://usclothes.ru/dto/errordata" name="detail" element="q3:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategories" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetCategories_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://usclothes.ru/dto/errordata" name="detail" element="q4:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSubCategoriesByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoriesByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSubCategoriesByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoriesByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSubCategoriesByCategory_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://usclothes.ru/dto/errordata" name="detail" element="q5:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSubCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategories" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSubCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSubCategories_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://usclothes.ru/dto/errordata" name="detail" element="q6:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateCategory_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://usclothes.ru/dto/errordata" name="detail" element="q7:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateCategory_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://usclothes.ru/dto/errordata" name="detail" element="q8:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateSubCategory_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://usclothes.ru/dto/errordata" name="detail" element="q9:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateSubCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubCategory" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateSubCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSubCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateSubCategory_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://usclothes.ru/dto/errordata" name="detail" element="q10:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSizesBySubCategoryAndBrand_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSizesBySubCategoryAndBrand" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSizesBySubCategoryAndBrand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSizesBySubCategoryAndBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSizesBySubCategoryAndBrand_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://usclothes.ru/dto/errordata" name="detail" element="q11:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSizes" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_GetSizes_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://usclothes.ru/dto/errordata" name="detail" element="q12:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSize" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_CreateSize_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://usclothes.ru/dto/errordata" name="detail" element="q13:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSize" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDictionaryAPI_UpdateSize_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://usclothes.ru/dto/errordata" name="detail" element="q14:ErrorData" />
+  </wsdl:message>
+  <wsdl:portType name="IDictionaryAPI">
+    <wsdl:operation name="GetBrands">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetBrands" message="tns:IDictionaryAPI_GetBrands_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetBrandsResponse" message="tns:IDictionaryAPI_GetBrands_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetBrandsErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_GetBrands_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBrand">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateBrand" message="tns:IDictionaryAPI_CreateBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateBrandResponse" message="tns:IDictionaryAPI_CreateBrand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateBrandErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_CreateBrand_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBrand">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateBrand" message="tns:IDictionaryAPI_UpdateBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateBrandResponse" message="tns:IDictionaryAPI_UpdateBrand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateBrandErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_UpdateBrand_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategories">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetCategories" message="tns:IDictionaryAPI_GetCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetCategoriesResponse" message="tns:IDictionaryAPI_GetCategories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetCategoriesErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_GetCategories_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategoriesByCategory">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSubCategoriesByCategory" message="tns:IDictionaryAPI_GetSubCategoriesByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSubCategoriesByCategoryResponse" message="tns:IDictionaryAPI_GetSubCategoriesByCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSubCategoriesByCategoryErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_GetSubCategoriesByCategory_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubCategories">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSubCategories" message="tns:IDictionaryAPI_GetSubCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSubCategoriesResponse" message="tns:IDictionaryAPI_GetSubCategories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSubCategoriesErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_GetSubCategories_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCategory">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateCategory" message="tns:IDictionaryAPI_CreateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateCategoryResponse" message="tns:IDictionaryAPI_CreateCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateCategoryErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_CreateCategory_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCategory">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateCategory" message="tns:IDictionaryAPI_UpdateCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateCategoryResponse" message="tns:IDictionaryAPI_UpdateCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateCategoryErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_UpdateCategory_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSubCategory">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateSubCategory" message="tns:IDictionaryAPI_CreateSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateSubCategoryResponse" message="tns:IDictionaryAPI_CreateSubCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateSubCategoryErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_CreateSubCategory_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSubCategory">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateSubCategory" message="tns:IDictionaryAPI_UpdateSubCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateSubCategoryResponse" message="tns:IDictionaryAPI_UpdateSubCategory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateSubCategoryErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_UpdateSubCategory_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSizesBySubCategoryAndBrand">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSizesBySubCategoryAndBrand" message="tns:IDictionaryAPI_GetSizesBySubCategoryAndBrand_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSizesBySubCategoryAndBrandResponse" message="tns:IDictionaryAPI_GetSizesBySubCategoryAndBrand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSizesBySubCategoryAndBrandErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_GetSizesBySubCategoryAndBrand_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSizes">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSizes" message="tns:IDictionaryAPI_GetSizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSizesResponse" message="tns:IDictionaryAPI_GetSizes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/GetSizesErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_GetSizes_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSize">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateSize" message="tns:IDictionaryAPI_CreateSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateSizeResponse" message="tns:IDictionaryAPI_CreateSize_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/CreateSizeErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_CreateSize_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSize">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateSize" message="tns:IDictionaryAPI_UpdateSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateSizeResponse" message="tns:IDictionaryAPI_UpdateSize_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/dictionaryapi/IDictionaryAPI/UpdateSizeErrorDataFault" name="ErrorDataFault" message="tns:IDictionaryAPI_UpdateSize_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

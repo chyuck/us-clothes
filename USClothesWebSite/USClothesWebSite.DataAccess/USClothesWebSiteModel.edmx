@@ -1,0 +1,2264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="USClothesWebSite.DataAccess.Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="USClothesWebSiteDataAccessModelStoreContainer">
+          <EntitySet Name="ActionLog" EntityType="USClothesWebSite.DataAccess.Model.Store.ActionLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ActionLogType" EntityType="USClothesWebSite.DataAccess.Model.Store.ActionLogType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Brand" EntityType="USClothesWebSite.DataAccess.Model.Store.Brand" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Category" EntityType="USClothesWebSite.DataAccess.Model.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DistributorTransfer" EntityType="USClothesWebSite.DataAccess.Model.Store.DistributorTransfer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="USClothesWebSite.DataAccess.Model.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderItem" EntityType="USClothesWebSite.DataAccess.Model.Store.OrderItem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Parcel" EntityType="USClothesWebSite.DataAccess.Model.Store.Parcel" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="USClothesWebSite.DataAccess.Model.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductSize" EntityType="USClothesWebSite.DataAccess.Model.Store.ProductSize" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="USClothesWebSite.DataAccess.Model.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Session" EntityType="USClothesWebSite.DataAccess.Model.Store.Session" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Settings" EntityType="USClothesWebSite.DataAccess.Model.Store.Settings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ShoppingCart" EntityType="USClothesWebSite.DataAccess.Model.Store.ShoppingCart" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Size" EntityType="USClothesWebSite.DataAccess.Model.Store.Size" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SubCategory" EntityType="USClothesWebSite.DataAccess.Model.Store.SubCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="USClothesWebSite.DataAccess.Model.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRole" EntityType="USClothesWebSite.DataAccess.Model.Store.UserRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_ActionLog_ActionLogType" Association="USClothesWebSite.DataAccess.Model.Store.FK_ActionLog_ActionLogType">
+            <End Role="ActionLogType" EntitySet="ActionLogType" />
+            <End Role="ActionLog" EntitySet="ActionLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActionLog_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_ActionLog_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="ActionLog" EntitySet="ActionLog" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Brand_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Brand_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Brand" EntitySet="Brand" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Brand_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Brand_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Brand" EntitySet="Brand" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Category_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Category_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DistributorTransfer_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_DistributorTransfer_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="DistributorTransfer" EntitySet="DistributorTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DistributorTransfer_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_DistributorTransfer_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="DistributorTransfer" EntitySet="DistributorTransfer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Order_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Order_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Parcel" Association="USClothesWebSite.DataAccess.Model.Store.FK_Order_Parcel">
+            <End Role="Parcel" EntitySet="Parcel" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_OrderItem_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_OrderItem_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_Order" Association="USClothesWebSite.DataAccess.Model.Store.FK_OrderItem_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_ProductSize" Association="USClothesWebSite.DataAccess.Model.Store.FK_OrderItem_ProductSize">
+            <End Role="ProductSize" EntitySet="ProductSize" />
+            <End Role="OrderItem" EntitySet="OrderItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parcel_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Parcel_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Parcel" EntitySet="Parcel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parcel_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Parcel_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Parcel" EntitySet="Parcel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parcel_Distributor" Association="USClothesWebSite.DataAccess.Model.Store.FK_Parcel_Distributor">
+            <End Role="User" EntitySet="User" />
+            <End Role="Parcel" EntitySet="Parcel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Brand" Association="USClothesWebSite.DataAccess.Model.Store.FK_Product_Brand">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Product_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Product_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_SubCategory" Association="USClothesWebSite.DataAccess.Model.Store.FK_Product_SubCategory">
+            <End Role="SubCategory" EntitySet="SubCategory" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_ProductSize_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="ProductSize" EntitySet="ProductSize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_ProductSize_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="ProductSize" EntitySet="ProductSize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_Product" Association="USClothesWebSite.DataAccess.Model.Store.FK_ProductSize_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="ProductSize" EntitySet="ProductSize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_Size" Association="USClothesWebSite.DataAccess.Model.Store.FK_ProductSize_Size">
+            <End Role="Size" EntitySet="Size" />
+            <End Role="ProductSize" EntitySet="ProductSize" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Settings_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Settings_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShoppingCart_ProductSize" Association="USClothesWebSite.DataAccess.Model.Store.FK_ShoppingCart_ProductSize">
+            <End Role="ProductSize" EntitySet="ProductSize" />
+            <End Role="ShoppingCart" EntitySet="ShoppingCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShoppingCart_Session" Association="USClothesWebSite.DataAccess.Model.Store.FK_ShoppingCart_Session">
+            <End Role="Session" EntitySet="Session" />
+            <End Role="ShoppingCart" EntitySet="ShoppingCart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_Brand" Association="USClothesWebSite.DataAccess.Model.Store.FK_Size_Brand">
+            <End Role="Brand" EntitySet="Brand" />
+            <End Role="Size" EntitySet="Size" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Size_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Size" EntitySet="Size" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_Size_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="Size" EntitySet="Size" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_SubCategory" Association="USClothesWebSite.DataAccess.Model.Store.FK_Size_SubCategory">
+            <End Role="SubCategory" EntitySet="SubCategory" />
+            <End Role="Size" EntitySet="Size" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_Category" Association="USClothesWebSite.DataAccess.Model.Store.FK_SubCategory_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="SubCategory" EntitySet="SubCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_SubCategory_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="SubCategory" EntitySet="SubCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_SubCategory_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="SubCategory" EntitySet="SubCategory" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_User_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="User1" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_User_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="User1" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_ChangeUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_UserRole_ChangeUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_CreateUser" Association="USClothesWebSite.DataAccess.Model.Store.FK_UserRole_CreateUser">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_Role" Association="USClothesWebSite.DataAccess.Model.Store.FK_UserRole_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_User" Association="USClothesWebSite.DataAccess.Model.Store.FK_UserRole_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserRole" EntitySet="UserRole" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ActionLog">
+          <Key>
+            <PropertyRef Name="ActionLogId" />
+          </Key>
+          <Property Name="ActionLogId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DocumentId" Type="int" Nullable="false" />
+          <Property Name="ActionLogTypeId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ActionLogType">
+          <Key>
+            <PropertyRef Name="ActionLogTypeId" />
+          </Key>
+          <Property Name="ActionLogTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="BrandId" />
+          </Key>
+          <Property Name="BrandId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DistributorTransfer">
+          <Key>
+            <PropertyRef Name="DistributorTransferId" />
+          </Key>
+          <Property Name="DistributorTransferId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="datetime2" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="RublesPerDollar" Type="money" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OrderDate" Type="datetime2" Nullable="false" />
+          <Property Name="CustomerFirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustomerLastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustomerAddress" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="CustomerCity" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustomerCountry" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CustomerPostalCode" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustomerPhoneNumber" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustomerEmail" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="1000" />
+          <Property Name="RublesPerDollar" Type="money" Nullable="false" />
+          <Property Name="CustomerPrepaid" Type="money" Nullable="false" />
+          <Property Name="ParcelId" Type="int" />
+          <Property Name="DistributorSpentOnDelivery" Type="money" Nullable="false" />
+          <Property Name="CustomerPaid" Type="money" Nullable="false" />
+          <Property Name="TrackingNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OrderItem">
+          <Key>
+            <PropertyRef Name="OrderItemId" />
+          </Key>
+          <Property Name="OrderItemId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="money" Nullable="false" />
+          <Property Name="PurchaserPaid" Type="money" Nullable="false" />
+          <Property Name="OrderId" Type="int" Nullable="false" />
+          <Property Name="ProductSizeId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parcel">
+          <Key>
+            <PropertyRef Name="ParcelId" />
+          </Key>
+          <Property Name="ParcelId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TrackingNumber" Type="nvarchar" MaxLength="20" />
+          <Property Name="SentDate" Type="datetime2" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="1000" />
+          <Property Name="RublesPerDollar" Type="money" Nullable="false" />
+          <Property Name="PurchaserSpentOnDelivery" Type="money" Nullable="false" />
+          <Property Name="DistributorId" Type="int" />
+          <Property Name="ReceivedDate" Type="datetime2" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="1000" />
+          <Property Name="PreviewPictureURL" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="FullPictureURL" Type="varchar" Nullable="false" MaxLength="1000" />
+          <Property Name="VendorShopURL" Type="varchar" MaxLength="1000" />
+          <Property Name="SubCategoryId" Type="int" Nullable="false" />
+          <Property Name="BrandId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ProductSize">
+          <Key>
+            <PropertyRef Name="ProductSizeId" />
+          </Key>
+          <Property Name="ProductSizeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="SizeId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="SessionId" />
+          </Key>
+          <Property Name="SessionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Key" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="SettingsId" />
+          </Key>
+          <Property Name="SettingsId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RublesPerDollar" Type="money" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShoppingCart">
+          <Key>
+            <PropertyRef Name="ShoppingCartId" />
+          </Key>
+          <Property Name="ShoppingCartId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="TotalPrice" Type="money" Nullable="false" />
+          <Property Name="SessionId" Type="int" Nullable="false" />
+          <Property Name="ProductSizeId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Size">
+          <Key>
+            <PropertyRef Name="SizeId" />
+          </Key>
+          <Property Name="SizeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SubCategoryId" Type="int" Nullable="false" />
+          <Property Name="BrandId" Type="int" Nullable="false" />
+          <Property Name="Weight" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Height" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubCategory">
+          <Key>
+            <PropertyRef Name="SubCategoryId" />
+          </Key>
+          <Property Name="SubCategoryId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Email" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Login" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PasswordHash" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="PasswordSalt" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="UserRoleId" />
+          </Key>
+          <Property Name="UserRoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime2" Nullable="false" />
+          <Property Name="ChangeDate" Type="datetime2" Nullable="false" />
+          <Property Name="CreateUserId" Type="int" Nullable="false" />
+          <Property Name="ChangeUserId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ActionLog_ActionLogType">
+          <End Role="ActionLogType" Type="USClothesWebSite.DataAccess.Model.Store.ActionLogType" Multiplicity="1" />
+          <End Role="ActionLog" Type="USClothesWebSite.DataAccess.Model.Store.ActionLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ActionLogType">
+              <PropertyRef Name="ActionLogTypeId" />
+            </Principal>
+            <Dependent Role="ActionLog">
+              <PropertyRef Name="ActionLogTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ActionLog_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="ActionLog" Type="USClothesWebSite.DataAccess.Model.Store.ActionLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="ActionLog">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Brand_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Brand" Type="USClothesWebSite.DataAccess.Model.Store.Brand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Brand">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Brand_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Brand" Type="USClothesWebSite.DataAccess.Model.Store.Brand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Brand">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Category" Type="USClothesWebSite.DataAccess.Model.Store.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Category" Type="USClothesWebSite.DataAccess.Model.Store.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DistributorTransfer_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="DistributorTransfer" Type="USClothesWebSite.DataAccess.Model.Store.DistributorTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="DistributorTransfer">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DistributorTransfer_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="DistributorTransfer" Type="USClothesWebSite.DataAccess.Model.Store.DistributorTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="DistributorTransfer">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Order" Type="USClothesWebSite.DataAccess.Model.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Order" Type="USClothesWebSite.DataAccess.Model.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Parcel">
+          <End Role="Parcel" Type="USClothesWebSite.DataAccess.Model.Store.Parcel" Multiplicity="0..1" />
+          <End Role="Order" Type="USClothesWebSite.DataAccess.Model.Store.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parcel">
+              <PropertyRef Name="ParcelId" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ParcelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="OrderItem" Type="USClothesWebSite.DataAccess.Model.Store.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="OrderItem" Type="USClothesWebSite.DataAccess.Model.Store.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_Order">
+          <End Role="Order" Type="USClothesWebSite.DataAccess.Model.Store.Order" Multiplicity="1" />
+          <End Role="OrderItem" Type="USClothesWebSite.DataAccess.Model.Store.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_ProductSize">
+          <End Role="ProductSize" Type="USClothesWebSite.DataAccess.Model.Store.ProductSize" Multiplicity="1" />
+          <End Role="OrderItem" Type="USClothesWebSite.DataAccess.Model.Store.OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSize">
+              <PropertyRef Name="ProductSizeId" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="ProductSizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parcel_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Parcel" Type="USClothesWebSite.DataAccess.Model.Store.Parcel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Parcel">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parcel_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Parcel" Type="USClothesWebSite.DataAccess.Model.Store.Parcel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Parcel">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parcel_Distributor">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="0..1" />
+          <End Role="Parcel" Type="USClothesWebSite.DataAccess.Model.Store.Parcel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Parcel">
+              <PropertyRef Name="DistributorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Brand">
+          <End Role="Brand" Type="USClothesWebSite.DataAccess.Model.Store.Brand" Multiplicity="1" />
+          <End Role="Product" Type="USClothesWebSite.DataAccess.Model.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Product" Type="USClothesWebSite.DataAccess.Model.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Product" Type="USClothesWebSite.DataAccess.Model.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_SubCategory">
+          <End Role="SubCategory" Type="USClothesWebSite.DataAccess.Model.Store.SubCategory" Multiplicity="1" />
+          <End Role="Product" Type="USClothesWebSite.DataAccess.Model.Store.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategory">
+              <PropertyRef Name="SubCategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="ProductSize" Type="USClothesWebSite.DataAccess.Model.Store.ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="ProductSize" Type="USClothesWebSite.DataAccess.Model.Store.ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_Product">
+          <End Role="Product" Type="USClothesWebSite.DataAccess.Model.Store.Product" Multiplicity="1" />
+          <End Role="ProductSize" Type="USClothesWebSite.DataAccess.Model.Store.ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_Size">
+          <End Role="Size" Type="USClothesWebSite.DataAccess.Model.Store.Size" Multiplicity="1" />
+          <End Role="ProductSize" Type="USClothesWebSite.DataAccess.Model.Store.ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Size">
+              <PropertyRef Name="SizeId" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="SizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Settings" Type="USClothesWebSite.DataAccess.Model.Store.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Settings" Type="USClothesWebSite.DataAccess.Model.Store.Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShoppingCart_ProductSize">
+          <End Role="ProductSize" Type="USClothesWebSite.DataAccess.Model.Store.ProductSize" Multiplicity="1" />
+          <End Role="ShoppingCart" Type="USClothesWebSite.DataAccess.Model.Store.ShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSize">
+              <PropertyRef Name="ProductSizeId" />
+            </Principal>
+            <Dependent Role="ShoppingCart">
+              <PropertyRef Name="ProductSizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShoppingCart_Session">
+          <End Role="Session" Type="USClothesWebSite.DataAccess.Model.Store.Session" Multiplicity="1" />
+          <End Role="ShoppingCart" Type="USClothesWebSite.DataAccess.Model.Store.ShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="SessionId" />
+            </Principal>
+            <Dependent Role="ShoppingCart">
+              <PropertyRef Name="SessionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_Brand">
+          <End Role="Brand" Type="USClothesWebSite.DataAccess.Model.Store.Brand" Multiplicity="1" />
+          <End Role="Size" Type="USClothesWebSite.DataAccess.Model.Store.Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="BrandId" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Size" Type="USClothesWebSite.DataAccess.Model.Store.Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="Size" Type="USClothesWebSite.DataAccess.Model.Store.Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_SubCategory">
+          <End Role="SubCategory" Type="USClothesWebSite.DataAccess.Model.Store.SubCategory" Multiplicity="1" />
+          <End Role="Size" Type="USClothesWebSite.DataAccess.Model.Store.Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategory">
+              <PropertyRef Name="SubCategoryId" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_Category">
+          <End Role="Category" Type="USClothesWebSite.DataAccess.Model.Store.Category" Multiplicity="1" />
+          <End Role="SubCategory" Type="USClothesWebSite.DataAccess.Model.Store.SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="SubCategory" Type="USClothesWebSite.DataAccess.Model.Store.SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="SubCategory" Type="USClothesWebSite.DataAccess.Model.Store.SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="User1" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="User1">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="User1" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="User1">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_ChangeUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="UserRole" Type="USClothesWebSite.DataAccess.Model.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_CreateUser">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="UserRole" Type="USClothesWebSite.DataAccess.Model.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_Role">
+          <End Role="Role" Type="USClothesWebSite.DataAccess.Model.Store.Role" Multiplicity="1" />
+          <End Role="UserRole" Type="USClothesWebSite.DataAccess.Model.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_User">
+          <End Role="User" Type="USClothesWebSite.DataAccess.Model.Store.User" Multiplicity="1" />
+          <End Role="UserRole" Type="USClothesWebSite.DataAccess.Model.Store.UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="USClothesWebSite.DataAccess.Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="USClothesShopEntities" p1:LazyLoadingEnabled="true" a:TypeAccess="Internal" xmlns:a="http://schemas.microsoft.com/ado/2006/04/codegeneration">
+          <EntitySet Name="ActionLogs" EntityType="USClothesWebSite.DataAccess.Model.ActionLog" />
+          <EntitySet Name="ActionLogTypes" EntityType="USClothesWebSite.DataAccess.Model.ActionLogType" />
+          <EntitySet Name="Brands" EntityType="USClothesWebSite.DataAccess.Model.Brand" />
+          <EntitySet Name="Categories" EntityType="USClothesWebSite.DataAccess.Model.Category" />
+          <EntitySet Name="Products" EntityType="USClothesWebSite.DataAccess.Model.Product" />
+          <EntitySet Name="ProductSizes" EntityType="USClothesWebSite.DataAccess.Model.ProductSize" />
+          <EntitySet Name="Roles" EntityType="USClothesWebSite.DataAccess.Model.Role" />
+          <EntitySet Name="Sessions" EntityType="USClothesWebSite.DataAccess.Model.Session" />
+          <EntitySet Name="ShoppingCarts" EntityType="USClothesWebSite.DataAccess.Model.ShoppingCart" />
+          <EntitySet Name="Sizes" EntityType="USClothesWebSite.DataAccess.Model.Size" />
+          <EntitySet Name="SubCategories" EntityType="USClothesWebSite.DataAccess.Model.SubCategory" />
+          <EntitySet Name="Users" EntityType="USClothesWebSite.DataAccess.Model.User" />
+          <EntitySet Name="UserRoles" EntityType="USClothesWebSite.DataAccess.Model.UserRole" />
+          <AssociationSet Name="FK_ActionLog_ActionLogType" Association="USClothesWebSite.DataAccess.Model.FK_ActionLog_ActionLogType">
+            <End Role="ActionLogType" EntitySet="ActionLogTypes" />
+            <End Role="ActionLog" EntitySet="ActionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ActionLog_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_ActionLog_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ActionLog" EntitySet="ActionLogs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Brand_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Brand_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Brand" EntitySet="Brands" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Brand_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Brand_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Brand" EntitySet="Brands" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Brand" Association="USClothesWebSite.DataAccess.Model.FK_Product_Brand">
+            <End Role="Brand" EntitySet="Brands" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_Brand" Association="USClothesWebSite.DataAccess.Model.FK_Size_Brand">
+            <End Role="Brand" EntitySet="Brands" />
+            <End Role="Size" EntitySet="Sizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Category_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Category" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Category_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Category_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Category" EntitySet="Categories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_Category" Association="USClothesWebSite.DataAccess.Model.FK_SubCategory_Category">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="SubCategory" EntitySet="SubCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Product_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Product_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_SubCategory" Association="USClothesWebSite.DataAccess.Model.FK_Product_SubCategory">
+            <End Role="SubCategory" EntitySet="SubCategories" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_Product" Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ProductSize_Size" Association="USClothesWebSite.DataAccess.Model.FK_ProductSize_Size">
+            <End Role="Size" EntitySet="Sizes" />
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShoppingCart_ProductSize" Association="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_ProductSize">
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+            <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_Role" Association="USClothesWebSite.DataAccess.Model.FK_UserRole_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ShoppingCart_Session" Association="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_Session">
+            <End Role="Session" EntitySet="Sessions" />
+            <End Role="ShoppingCart" EntitySet="ShoppingCarts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Size_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Size" EntitySet="Sizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Size_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Size" EntitySet="Sizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Size_SubCategory" Association="USClothesWebSite.DataAccess.Model.FK_Size_SubCategory">
+            <End Role="SubCategory" EntitySet="SubCategories" />
+            <End Role="Size" EntitySet="Sizes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_SubCategory_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="SubCategory" EntitySet="SubCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategory_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_SubCategory_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="SubCategory" EntitySet="SubCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_User_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="User1" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_User_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="User1" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_UserRole_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_UserRole_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_User" Association="USClothesWebSite.DataAccess.Model.FK_UserRole_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserRole" EntitySet="UserRoles" />
+          </AssociationSet>
+          <EntitySet Name="Settings" EntityType="USClothesWebSite.DataAccess.Model.Settings" />
+          <AssociationSet Name="FK_Settings_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Settings_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Settings_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Settings_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Settings" EntitySet="Settings" />
+          </AssociationSet>
+          <EntitySet Name="OrderItems" EntityType="USClothesWebSite.DataAccess.Model.OrderItem" />
+          <EntitySet Name="Parcels" EntityType="USClothesWebSite.DataAccess.Model.Parcel" />
+          <AssociationSet Name="FK_OrderItem_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="OrderItem" EntitySet="OrderItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="OrderItem" EntitySet="OrderItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_ProductSize" Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_ProductSize">
+            <End Role="ProductSize" EntitySet="ProductSizes" />
+            <End Role="OrderItem" EntitySet="OrderItems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parcel_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Parcel_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Parcel" EntitySet="Parcels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parcel_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Parcel_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Parcel" EntitySet="Parcels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Parcel_Distributor" Association="USClothesWebSite.DataAccess.Model.FK_Parcel_Distributor">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Parcel" EntitySet="Parcels" />
+          </AssociationSet>
+          <EntitySet Name="Orders" EntityType="USClothesWebSite.DataAccess.Model.Order" />
+          <AssociationSet Name="FK_Order_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_Order_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_Order_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_Parcel" Association="USClothesWebSite.DataAccess.Model.FK_Order_Parcel">
+            <End Role="Parcel" EntitySet="Parcels" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderItem_Order" Association="USClothesWebSite.DataAccess.Model.FK_OrderItem_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderItem" EntitySet="OrderItems" />
+          </AssociationSet>
+          <EntitySet Name="DistributorTransfers" EntityType="USClothesWebSite.DataAccess.Model.DistributorTransfer" />
+          <AssociationSet Name="FK_DistributorTransfer_ChangeUser" Association="USClothesWebSite.DataAccess.Model.FK_DistributorTransfer_ChangeUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="DistributorTransfer" EntitySet="DistributorTransfers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DistributorTransfer_CreateUser" Association="USClothesWebSite.DataAccess.Model.FK_DistributorTransfer_CreateUser">
+            <End Role="User" EntitySet="Users" />
+            <End Role="DistributorTransfer" EntitySet="DistributorTransfers" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ActionLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Text" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DocumentId" Nullable="false" />
+          <Property Type="Int32" Name="ActionLogTypeId" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <NavigationProperty Name="ActionLogType" Relationship="USClothesWebSite.DataAccess.Model.FK_ActionLog_ActionLogType" FromRole="ActionLog" ToRole="ActionLogType" />
+          <NavigationProperty Name="CreateUser" Relationship="USClothesWebSite.DataAccess.Model.FK_ActionLog_CreateUser" FromRole="ActionLog" ToRole="User" />
+        </EntityType>
+        <EntityType Name="ActionLogType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ActionLogs" Relationship="USClothesWebSite.DataAccess.Model.FK_ActionLog_ActionLogType" FromRole="ActionLogType" ToRole="ActionLog" />
+        </EntityType>
+        <EntityType Name="Brand">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Brand_ChangeUser" FromRole="Brand" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Brand_CreateUser" FromRole="Brand" ToRole="User" />
+          <NavigationProperty Name="Products" Relationship="USClothesWebSite.DataAccess.Model.FK_Product_Brand" FromRole="Brand" ToRole="Product" />
+          <NavigationProperty Name="Sizes" Relationship="USClothesWebSite.DataAccess.Model.FK_Size_Brand" FromRole="Brand" ToRole="Size" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Category_ChangeUser" FromRole="Category" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Category_CreateUser" FromRole="Category" ToRole="User" />
+          <NavigationProperty Name="SubCategories" Relationship="USClothesWebSite.DataAccess.Model.FK_SubCategory_Category" FromRole="Category" ToRole="SubCategory" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PreviewPictureURL" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FullPictureURL" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+          <Property Type="Int32" Name="BrandId" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="Brand" Relationship="USClothesWebSite.DataAccess.Model.FK_Product_Brand" FromRole="Product" ToRole="Brand" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Product_ChangeUser" FromRole="Product" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Product_CreateUser" FromRole="Product" ToRole="User" />
+          <NavigationProperty Name="SubCategory" Relationship="USClothesWebSite.DataAccess.Model.FK_Product_SubCategory" FromRole="Product" ToRole="SubCategory" />
+          <NavigationProperty Name="ProductSizes" Relationship="USClothesWebSite.DataAccess.Model.FK_ProductSize_Product" FromRole="Product" ToRole="ProductSize" />
+          <Property Type="String" Name="VendorShopURL" MaxLength="1000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ProductSize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="ProductId" Nullable="false" />
+          <Property Type="Int32" Name="SizeId" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="USClothesWebSite.DataAccess.Model.FK_ProductSize_Product" FromRole="ProductSize" ToRole="Product" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_ProductSize_ChangeUser" FromRole="ProductSize" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_ProductSize_CreateUser" FromRole="ProductSize" ToRole="User" />
+          <NavigationProperty Name="Size" Relationship="USClothesWebSite.DataAccess.Model.FK_ProductSize_Size" FromRole="ProductSize" ToRole="Size" />
+          <NavigationProperty Name="ShoppingCarts" Relationship="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_ProductSize" FromRole="ProductSize" ToRole="ShoppingCart" />
+          <NavigationProperty Name="OrderItems" Relationship="USClothesWebSite.DataAccess.Model.FK_OrderItem_ProductSize" FromRole="ProductSize" ToRole="OrderItem" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UserRoles" Relationship="USClothesWebSite.DataAccess.Model.FK_UserRole_Role" FromRole="Role" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Key" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <NavigationProperty Name="ShoppingCarts" Relationship="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_Session" FromRole="Session" ToRole="ShoppingCart" />
+        </EntityType>
+        <EntityType Name="ShoppingCart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
+          <Property Type="Decimal" Name="TotalPrice" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="SessionId" Nullable="false" />
+          <Property Type="Int32" Name="ProductSizeId" Nullable="false" />
+          <NavigationProperty Name="ProductSize" Relationship="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_ProductSize" FromRole="ShoppingCart" ToRole="ProductSize" />
+          <NavigationProperty Name="Session" Relationship="USClothesWebSite.DataAccess.Model.FK_ShoppingCart_Session" FromRole="ShoppingCart" ToRole="Session" />
+        </EntityType>
+        <EntityType Name="Size">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SubCategoryId" Nullable="false" />
+          <Property Type="Int32" Name="BrandId" Nullable="false" />
+          <Property Type="String" Name="Weight" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Height" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="Brand" Relationship="USClothesWebSite.DataAccess.Model.FK_Size_Brand" FromRole="Size" ToRole="Brand" />
+          <NavigationProperty Name="ProductSizes" Relationship="USClothesWebSite.DataAccess.Model.FK_ProductSize_Size" FromRole="Size" ToRole="ProductSize" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Size_ChangeUser" FromRole="Size" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Size_CreateUser" FromRole="Size" ToRole="User" />
+          <NavigationProperty Name="SubCategory" Relationship="USClothesWebSite.DataAccess.Model.FK_Size_SubCategory" FromRole="Size" ToRole="SubCategory" />
+        </EntityType>
+        <EntityType Name="SubCategory">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="USClothesWebSite.DataAccess.Model.FK_SubCategory_Category" FromRole="SubCategory" ToRole="Category" />
+          <NavigationProperty Name="Products" Relationship="USClothesWebSite.DataAccess.Model.FK_Product_SubCategory" FromRole="SubCategory" ToRole="Product" />
+          <NavigationProperty Name="Sizes" Relationship="USClothesWebSite.DataAccess.Model.FK_Size_SubCategory" FromRole="SubCategory" ToRole="Size" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_SubCategory_ChangeUser" FromRole="SubCategory" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_SubCategory_CreateUser" FromRole="SubCategory" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Login" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PasswordHash" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_User_ChangeUser" FromRole="User1" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_User_CreateUser" FromRole="User1" ToRole="User" />
+          <NavigationProperty Name="UserRoles" Relationship="USClothesWebSite.DataAccess.Model.FK_UserRole_User" FromRole="User" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserId" Nullable="false" />
+          <Property Type="Int32" Name="RoleId" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="Role" Relationship="USClothesWebSite.DataAccess.Model.FK_UserRole_Role" FromRole="UserRole" ToRole="Role" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_UserRole_ChangeUser" FromRole="UserRole" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_UserRole_CreateUser" FromRole="UserRole" ToRole="User" />
+          <NavigationProperty Name="User" Relationship="USClothesWebSite.DataAccess.Model.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_ActionLog_ActionLogType">
+          <End Type="USClothesWebSite.DataAccess.Model.ActionLogType" Role="ActionLogType" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ActionLog" Role="ActionLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ActionLogType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ActionLog">
+              <PropertyRef Name="ActionLogTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ActionLog_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ActionLog" Role="ActionLog" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ActionLog">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Brand_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Brand" Role="Brand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Brand">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Brand_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Brand" Role="Brand" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Brand">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Brand">
+          <End Type="USClothesWebSite.DataAccess.Model.Brand" Role="Brand" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_Brand">
+          <End Type="USClothesWebSite.DataAccess.Model.Brand" Role="Brand" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Size" Role="Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Brand">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="BrandId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Category" Role="Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Category_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Category" Role="Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_Category">
+          <End Type="USClothesWebSite.DataAccess.Model.Category" Role="Category" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.SubCategory" Role="SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_SubCategory">
+          <End Type="USClothesWebSite.DataAccess.Model.SubCategory" Role="SubCategory" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_Product">
+          <End Type="USClothesWebSite.DataAccess.Model.Product" Role="Product" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ProductSize" Role="ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ProductSize" Role="ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ProductSize" Role="ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ProductSize_Size">
+          <End Type="USClothesWebSite.DataAccess.Model.Size" Role="Size" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ProductSize" Role="ProductSize" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Size">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProductSize">
+              <PropertyRef Name="SizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShoppingCart_ProductSize">
+          <End Type="USClothesWebSite.DataAccess.Model.ProductSize" Role="ProductSize" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ShoppingCart" Role="ShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSize">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ShoppingCart">
+              <PropertyRef Name="ProductSizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_Role">
+          <End Type="USClothesWebSite.DataAccess.Model.Role" Role="Role" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.UserRole" Role="UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ShoppingCart_Session">
+          <End Type="USClothesWebSite.DataAccess.Model.Session" Role="Session" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.ShoppingCart" Role="ShoppingCart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Session">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ShoppingCart">
+              <PropertyRef Name="SessionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Size" Role="Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Size" Role="Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Size_SubCategory">
+          <End Type="USClothesWebSite.DataAccess.Model.SubCategory" Role="SubCategory" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Size" Role="Size" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategory">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Size">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.SubCategory" Role="SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategory_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.SubCategory" Role="SubCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubCategory">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User1">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User1">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.UserRole" Role="UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.UserRole" Role="UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_User">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.UserRole" Role="UserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserRole">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="RublesPerDollar" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Settings_ChangeUser" FromRole="Settings" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Settings_CreateUser" FromRole="Settings" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_Settings_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Settings" Role="Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Settings_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Settings" Role="Settings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Settings">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="OrderItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Decimal" Name="Price" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
+          <Property Type="Decimal" Name="TotalPrice" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="PurchaserPaid" Precision="19" Scale="4" Nullable="false" />
+          <Property Type="Int32" Name="OrderId" Nullable="false" />
+          <Property Type="Int32" Name="ProductSizeId" Nullable="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_OrderItem_ChangeUser" FromRole="OrderItem" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_OrderItem_CreateUser" FromRole="OrderItem" ToRole="User" />
+          <NavigationProperty Name="ProductSize" Relationship="USClothesWebSite.DataAccess.Model.FK_OrderItem_ProductSize" FromRole="OrderItem" ToRole="ProductSize" />
+          <NavigationProperty Name="Order" Relationship="USClothesWebSite.DataAccess.Model.FK_OrderItem_Order" FromRole="OrderItem" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Parcel">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TrackingNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="SentDate" Precision="7" />
+          <Property Type="String" Name="Comments" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="RublesPerDollar" Precision="19" Scale="4" Nullable="false" />
+          <Property Type="Decimal" Name="PurchaserSpentOnDelivery" Precision="19" Scale="4" Nullable="false" />
+          <Property Type="Int32" Name="DistributorId" />
+          <Property Type="DateTime" Name="ReceivedDate" Precision="7" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Parcel_ChangeUser" FromRole="Parcel" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Parcel_CreateUser" FromRole="Parcel" ToRole="User" />
+          <NavigationProperty Name="Distributor" Relationship="USClothesWebSite.DataAccess.Model.FK_Parcel_Distributor" FromRole="Parcel" ToRole="User" />
+          <NavigationProperty Name="Orders" Relationship="USClothesWebSite.DataAccess.Model.FK_Order_Parcel" FromRole="Parcel" ToRole="Order" />
+        </EntityType>
+        <Association Name="FK_OrderItem_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.OrderItem" Role="OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.OrderItem" Role="OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_ProductSize">
+          <End Type="USClothesWebSite.DataAccess.Model.ProductSize" Role="ProductSize" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.OrderItem" Role="OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProductSize">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="ProductSizeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parcel_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Parcel" Role="Parcel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parcel">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parcel_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Parcel" Role="Parcel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parcel">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Parcel_Distributor">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Parcel" Role="Parcel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Parcel">
+              <PropertyRef Name="DistributorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="OrderDate" Nullable="false" Precision="7" />
+          <Property Type="String" Name="CustomerFirstName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomerLastName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomerAddress" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomerCity" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomerCountry" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CustomerPostalCode" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomerPhoneNumber" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CustomerEmail" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+          <Property Type="String" Name="Comments" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="RublesPerDollar" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="CustomerPrepaid" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Int32" Name="ParcelId" />
+          <Property Type="Decimal" Name="DistributorSpentOnDelivery" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="CustomerPaid" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="String" Name="TrackingNumber" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Order_ChangeUser" FromRole="Order" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_Order_CreateUser" FromRole="Order" ToRole="User" />
+          <NavigationProperty Name="Parcel" Relationship="USClothesWebSite.DataAccess.Model.FK_Order_Parcel" FromRole="Order" ToRole="Parcel" />
+          <NavigationProperty Name="OrderItems" Relationship="USClothesWebSite.DataAccess.Model.FK_OrderItem_Order" FromRole="Order" ToRole="OrderItem" />
+        </EntityType>
+        <Association Name="FK_Order_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_Parcel">
+          <End Type="USClothesWebSite.DataAccess.Model.Parcel" Role="Parcel" Multiplicity="0..1" />
+          <End Type="USClothesWebSite.DataAccess.Model.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Parcel">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="ParcelId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderItem_Order">
+          <End Type="USClothesWebSite.DataAccess.Model.Order" Role="Order" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.OrderItem" Role="OrderItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrderItem">
+              <PropertyRef Name="OrderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="DistributorTransfer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Date" Nullable="false" Precision="7" />
+          <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Decimal" Name="RublesPerDollar" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="CreateDate" Nullable="false" Precision="7" />
+          <Property Type="DateTime" Name="ChangeDate" Nullable="false" Precision="7" />
+          <Property Type="Int32" Name="CreateUserId" Nullable="false" />
+          <Property Type="Int32" Name="ChangeUserId" Nullable="false" />
+          <NavigationProperty Name="ChangedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_DistributorTransfer_ChangeUser" FromRole="DistributorTransfer" ToRole="User" />
+          <NavigationProperty Name="CreatedBy" Relationship="USClothesWebSite.DataAccess.Model.FK_DistributorTransfer_CreateUser" FromRole="DistributorTransfer" ToRole="User" />
+          <Property Type="Boolean" Name="Active" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_DistributorTransfer_ChangeUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.DistributorTransfer" Role="DistributorTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DistributorTransfer">
+              <PropertyRef Name="ChangeUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DistributorTransfer_CreateUser">
+          <End Type="USClothesWebSite.DataAccess.Model.User" Role="User" Multiplicity="1" />
+          <End Type="USClothesWebSite.DataAccess.Model.DistributorTransfer" Role="DistributorTransfer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="DistributorTransfer">
+              <PropertyRef Name="CreateUserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="USClothesWebSiteDataAccessModelStoreContainer" CdmEntityContainer="USClothesShopEntities">
+          <EntitySetMapping Name="ActionLogs">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.ActionLog">
+              <MappingFragment StoreEntitySet="ActionLog">
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ActionLogTypeId" ColumnName="ActionLogTypeId" />
+                <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+                <ScalarProperty Name="Text" ColumnName="Text" />
+                <ScalarProperty Name="Id" ColumnName="ActionLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ActionLogTypes">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.ActionLogType">
+              <MappingFragment StoreEntitySet="ActionLogType">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="ActionLogTypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Brand">
+              <MappingFragment StoreEntitySet="Brand">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="BrandId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Categories">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="CategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="VendorShopURL" ColumnName="VendorShopURL" />
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+                <ScalarProperty Name="FullPictureURL" ColumnName="FullPictureURL" />
+                <ScalarProperty Name="PreviewPictureURL" ColumnName="PreviewPictureURL" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductSizes">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.ProductSize">
+              <MappingFragment StoreEntitySet="ProductSize">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="SizeId" ColumnName="SizeId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="ProductSizeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="RoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessions">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Session">
+              <MappingFragment StoreEntitySet="Session">
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Key" ColumnName="Key" />
+                <ScalarProperty Name="Id" ColumnName="SessionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShoppingCarts">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.ShoppingCart">
+              <MappingFragment StoreEntitySet="ShoppingCart">
+                <ScalarProperty Name="ProductSizeId" ColumnName="ProductSizeId" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Id" ColumnName="ShoppingCartId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sizes">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Size">
+              <MappingFragment StoreEntitySet="Size">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+                <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="SizeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCategories">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.SubCategory">
+              <MappingFragment StoreEntitySet="SubCategory">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="SubCategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="UserRoleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Settings">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="RublesPerDollar" ColumnName="RublesPerDollar" />
+                <ScalarProperty Name="Id" ColumnName="SettingsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderItems">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.OrderItem">
+              <MappingFragment StoreEntitySet="OrderItem">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ProductSizeId" ColumnName="ProductSizeId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="PurchaserPaid" ColumnName="PurchaserPaid" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Id" ColumnName="OrderItemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parcels">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Parcel">
+              <MappingFragment StoreEntitySet="Parcel">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ReceivedDate" ColumnName="ReceivedDate" />
+                <ScalarProperty Name="DistributorId" ColumnName="DistributorId" />
+                <ScalarProperty Name="PurchaserSpentOnDelivery" ColumnName="PurchaserSpentOnDelivery" />
+                <ScalarProperty Name="RublesPerDollar" ColumnName="RublesPerDollar" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+                <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+                <ScalarProperty Name="Id" ColumnName="ParcelId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="TrackingNumber" ColumnName="TrackingNumber" />
+                <ScalarProperty Name="CustomerPaid" ColumnName="CustomerPaid" />
+                <ScalarProperty Name="DistributorSpentOnDelivery" ColumnName="DistributorSpentOnDelivery" />
+                <ScalarProperty Name="ParcelId" ColumnName="ParcelId" />
+                <ScalarProperty Name="CustomerPrepaid" ColumnName="CustomerPrepaid" />
+                <ScalarProperty Name="RublesPerDollar" ColumnName="RublesPerDollar" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CustomerEmail" ColumnName="CustomerEmail" />
+                <ScalarProperty Name="CustomerPhoneNumber" ColumnName="CustomerPhoneNumber" />
+                <ScalarProperty Name="CustomerPostalCode" ColumnName="CustomerPostalCode" />
+                <ScalarProperty Name="CustomerCountry" ColumnName="CustomerCountry" />
+                <ScalarProperty Name="CustomerCity" ColumnName="CustomerCity" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
+                <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
+                <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+                <ScalarProperty Name="Id" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DistributorTransfers">
+            <EntityTypeMapping TypeName="USClothesWebSite.DataAccess.Model.DistributorTransfer">
+              <MappingFragment StoreEntitySet="DistributorTransfer">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="ChangeUserId" ColumnName="ChangeUserId" />
+                <ScalarProperty Name="CreateUserId" ColumnName="CreateUserId" />
+                <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="RublesPerDollar" ColumnName="RublesPerDollar" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Id" ColumnName="DistributorTransferId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

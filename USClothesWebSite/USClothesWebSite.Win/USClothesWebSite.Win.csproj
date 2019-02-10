@@ -1,0 +1,628 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A76C3E3B-983D-4A3B-901A-3775BBD3B643}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>USClothesWebSite.Win</RootNamespace>
+    <AssemblyName>USClothes</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ProjectConfigFileName>App.Config</ProjectConfigFileName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ProjectConfigFileName>App.Release.Config</ProjectConfigFileName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DepIC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DepIC.1.0.0.0\lib\NET40\DepIC.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Properties\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Controls\DateIntervalControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\DateIntervalControl.Designer.cs">
+      <DependentUpon>DateIntervalControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\FilterControl.Designer.cs">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NotImplementedBaseControlMemberException.cs" />
+    <Compile Include="Controls\NullableDatePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PreviewPicture\FullPictureViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\PreviewPicture\FullPictureViewForm.Designer.cs">
+      <DependentUpon>FullPictureViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PreviewPicture\PreviewPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PreviewPicture\PreviewPicture.Designer.cs">
+      <DependentUpon>PreviewPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\BrandReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\CategoryReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\DialogClosedEventArgs.cs" />
+    <Compile Include="Controls\ReferenceEditor\OrderReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\ParcelReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\ProductReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\ProductSizeReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\ReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\ReferenceEditor.Designer.cs">
+      <DependentUpon>ReferenceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\ReferenceEditorMode.cs" />
+    <Compile Include="Controls\ReferenceEditor\ReferenceEditorOfT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\SizeReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\SubCategoryReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ReferenceEditor\UserReferenceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TrackableDtoAttributes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\TrackableDtoAttributes.Designer.cs">
+      <DependentUpon>TrackableDtoAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\WatermarkedMaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\WatermarkedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\NativeMethods.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administration\LogEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\LogEditForm.Designer.cs">
+      <DependentUpon>LogEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administration\LogListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\LogListForm.Designer.cs">
+      <DependentUpon>LogListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Administration\SettingsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Administration\SettingsEditForm.Designer.cs">
+      <DependentUpon>SettingsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\BaseDetailEditFormOfT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseDtoEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseDtoEditForm.Designer.cs">
+      <DependentUpon>BaseDtoEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\BaseDtoListFormOfT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseDtoMasterDetailFormOfT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseEditForm.Designer.cs">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Base\BaseDtoEditFormOfT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\NotImplementedBaseFormMemberException.cs" />
+    <Compile Include="Forms\Base\BaseListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseListForm.Designer.cs">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\EditFormModeExtensions.cs" />
+    <Compile Include="Forms\Base\BaseMasterDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Base\BaseMasterDetailForm.Designer.cs">
+      <DependentUpon>BaseMasterDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\BrandEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\BrandEditForm.Designer.cs">
+      <DependentUpon>BrandEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\BrandListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\BrandListForm.Designer.cs">
+      <DependentUpon>BrandListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\CategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\CategoryEditForm.Designer.cs">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\CategoryMasterDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\CategoryMasterDetailForm.Designer.cs">
+      <DependentUpon>CategoryMasterDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SizeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SizeEditForm.Designer.cs">
+      <DependentUpon>SizeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SizeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SizeListForm.Designer.cs">
+      <DependentUpon>SizeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SubCategoryEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SubCategoryEditForm.Designer.cs">
+      <DependentUpon>SubCategoryEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SubCategoryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionary\SubCategoryListForm.Designer.cs">
+      <DependentUpon>SubCategoryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\DistributorTransferEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\DistributorTransferEditForm.Designer.cs">
+      <DependentUpon>DistributorTransferEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\DistributorTransferListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\DistributorTransferListForm.Designer.cs">
+      <DependentUpon>DistributorTransferListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\OrderEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\OrderEditForm.Designer.cs">
+      <DependentUpon>OrderEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\OrderItemEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\OrderItemEditForm.Designer.cs">
+      <DependentUpon>OrderItemEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\OrderMasterDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\OrderMasterDetailForm.Designer.cs">
+      <DependentUpon>OrderMasterDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\ParcelEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\ParcelEditForm.Designer.cs">
+      <DependentUpon>ParcelEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Document\ParcelMasterDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Document\ParcelMasterDetailForm.Designer.cs">
+      <DependentUpon>ParcelMasterDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\ProductEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\ProductEditForm.Designer.cs">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\ProductMasterDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\ProductMasterDetailForm.Designer.cs">
+      <DependentUpon>ProductMasterDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\ProductSizeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\ProductSizeEditForm.Designer.cs">
+      <DependentUpon>ProductSizeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\ProductSizeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\ProductSizeListForm.Designer.cs">
+      <DependentUpon>ProductSizeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report\DistributorReportEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\DistributorReportEditForm.Designer.cs">
+      <DependentUpon>DistributorReportEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report\DistributorReportListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\DistributorReportListForm.Designer.cs">
+      <DependentUpon>DistributorReportListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report\ParcelReportEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\ParcelReportEditForm.Designer.cs">
+      <DependentUpon>ParcelReportEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report\ParcelReportListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\ParcelReportListForm.Designer.cs">
+      <DependentUpon>ParcelReportListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ControlCustomizeHelper.cs" />
+    <Compile Include="Helpers\FormRegistrationHelper.cs" />
+    <Compile Include="Helpers\PopupHelper.cs" />
+    <Compile Include="Helpers\TrackableDtoListFormHelper.cs" />
+    <Compile Include="Forms\ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Security\UserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Security\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\DateIntervalControl.resx">
+      <DependentUpon>DateIntervalControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FilterControl.resx">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PreviewPicture\FullPictureViewForm.resx">
+      <DependentUpon>FullPictureViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PreviewPicture\PreviewPicture.resx">
+      <DependentUpon>PreviewPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ReferenceEditor\ReferenceEditor.resx">
+      <DependentUpon>ReferenceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TrackableDtoAttributes.resx">
+      <DependentUpon>TrackableDtoAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administration\LogEditForm.resx">
+      <DependentUpon>LogEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administration\LogListForm.resx">
+      <DependentUpon>LogListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Administration\SettingsEditForm.resx">
+      <DependentUpon>SettingsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\BaseDtoEditForm.resx">
+      <DependentUpon>BaseDtoEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\BaseEditForm.resx">
+      <DependentUpon>BaseEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\BaseListForm.resx">
+      <DependentUpon>BaseListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Base\BaseMasterDetailForm.resx">
+      <DependentUpon>BaseMasterDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\BrandEditForm.resx">
+      <DependentUpon>BrandEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\BrandListForm.resx">
+      <DependentUpon>BrandListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\CategoryEditForm.resx">
+      <DependentUpon>CategoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\CategoryMasterDetailForm.resx">
+      <DependentUpon>CategoryMasterDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\SizeEditForm.resx">
+      <DependentUpon>SizeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\SizeListForm.resx">
+      <DependentUpon>SizeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\SubCategoryEditForm.resx">
+      <DependentUpon>SubCategoryEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionary\SubCategoryListForm.resx">
+      <DependentUpon>SubCategoryListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\DistributorTransferEditForm.resx">
+      <DependentUpon>DistributorTransferEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\DistributorTransferListForm.resx">
+      <DependentUpon>DistributorTransferListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\OrderEditForm.resx">
+      <DependentUpon>OrderEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\OrderItemEditForm.resx">
+      <DependentUpon>OrderItemEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\OrderMasterDetailForm.resx">
+      <DependentUpon>OrderMasterDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\ParcelEditForm.resx">
+      <DependentUpon>ParcelEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Document\ParcelMasterDetailForm.resx">
+      <DependentUpon>ParcelMasterDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\ProductEditForm.resx">
+      <DependentUpon>ProductEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\ProductMasterDetailForm.resx">
+      <DependentUpon>ProductMasterDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\ProductSizeEditForm.resx">
+      <DependentUpon>ProductSizeEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\ProductSizeListForm.resx">
+      <DependentUpon>ProductSizeListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\DistributorReportEditForm.resx">
+      <DependentUpon>DistributorReportEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\DistributorReportListForm.resx">
+      <DependentUpon>DistributorReportListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\ParcelReportEditForm.resx">
+      <DependentUpon>ParcelReportEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\ParcelReportListForm.resx">
+      <DependentUpon>ParcelReportListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Security\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <None Include="Resources\GoToNextHS.png" />
+    <None Include="Resources\CopyHS.png" />
+    <None Include="Resources\157_GetPermission_16x16_72.png" />
+    <None Include="Resources\delete_12x12.png" />
+    <None Include="Resources\pencil.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\asterisk_orange.png" />
+    <None Include="Resources\arrow_refresh.png" />
+    <None Include="Resources\application_tile_vertical.png" />
+    <None Include="Resources\application_tile_horizontal.png" />
+    <None Include="Resources\application_cascade.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\USClothesWebSite.Common\USClothesWebSite.Common.csproj">
+      <Project>{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}</Project>
+      <Name>USClothesWebSite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.DTO\USClothesWebSite.DTO.csproj">
+      <Project>{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}</Project>
+      <Name>USClothesWebSite.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.Win.Logic\USClothesWebSite.Win.Logic.csproj">
+      <Project>{EA3D2C0C-641B-4E45-9588-082D852783A2}</Project>
+      <Name>USClothesWebSite.Win.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppTemplate.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="AppTemplate.Debug.config">
+      <DependentUpon>AppTemplate.config</DependentUpon>
+    </Content>
+    <Content Include="AppTemplate.Release.config">
+      <DependentUpon>AppTemplate.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(VSToolsPath)\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <Target Name="BeforeBuild">
+    <Copy SourceFiles="AppTemplate.config" DestinationFiles="App.config" Condition="!exists('App.config')" />
+  </Target>
+  <Target Name="AfterCompile">
+    <TransformXml Source="AppTemplate.config" Destination="App.config" Transform="AppTemplate.$(Configuration).config" Condition="exists('AppTemplate.$(Configuration).config')" />
+  </Target>
+</Project>

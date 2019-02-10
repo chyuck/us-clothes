@@ -1,0 +1,1 @@
+DeployRelease.bat "c:\iis\usclothes"

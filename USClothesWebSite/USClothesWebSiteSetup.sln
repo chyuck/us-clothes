@@ -1,0 +1,153 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.Web", "USClothesWebSite.Web\USClothesWebSite.Web.csproj", "{6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{AB449801-03F8-4212-80DE-A6435E00FA2F}"
+	ProjectSection(SolutionItems) = preProject
+		..\Database\CreateDatabase.sql = ..\Database\CreateDatabase.sql
+		..\Database\CreateInitialData.sql = ..\Database\CreateInitialData.sql
+		..\Database\Install.bat = ..\Database\Install.bat
+		..\Database\Install.sql = ..\Database\Install.sql
+		..\Database\Patch_1.0.1.sql = ..\Database\Patch_1.0.1.sql
+		..\Database\Patch_1.0.2.sql = ..\Database\Patch_1.0.2.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.BusinessLogic", "USClothesWebSite.BusinessLogic\USClothesWebSite.BusinessLogic.csproj", "{565A9CBC-659F-4FFC-BCBC-E7794C737DD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{7632078D-DBB4-4FE9-9B06-6E09F0D3475F}"
+	ProjectSection(SolutionItems) = preProject
+		Properties\SolutionInfo.cs = Properties\SolutionInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.DataAccess", "USClothesWebSite.DataAccess\USClothesWebSite.DataAccess.csproj", "{8AEF7303-560B-409B-91E3-3F0B8ED1109E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.Common", "USClothesWebSite.Common\USClothesWebSite.Common.csproj", "{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.BusinessLogic.Test", "USClothesWebSite.BusinessLogic.Test\USClothesWebSite.BusinessLogic.Test.csproj", "{72FC9517-8494-49A8-84AA-6DEC0543A300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.DTO", "USClothesWebSite.DTO\USClothesWebSite.DTO.csproj", "{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.Common.Test", "USClothesWebSite.Common.Test\USClothesWebSite.Common.Test.csproj", "{9D804541-4C77-4993-9B7C-814E2E649ABF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{94D0B74C-33E8-4CA3-881F-6E079FA8E8EF}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documents\Business Process Sequence Diagram.png = ..\Documents\Business Process Sequence Diagram.png
+		..\Documents\Entity Diagram.png = ..\Documents\Entity Diagram.png
+		..\Documents\Permissions.xlsx = ..\Documents\Permissions.xlsx
+		..\Documents\Test Data.txt = ..\Documents\Test Data.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.Test.Common", "USClothesWebSite.Test.Common\USClothesWebSite.Test.Common.csproj", "{F1196977-6D37-4A23-A241-E4CE09AEDC28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.Win", "USClothesWebSite.Win\USClothesWebSite.Win.csproj", "{A76C3E3B-983D-4A3B-901A-3775BBD3B643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USClothesWebSite.Win.Logic", "USClothesWebSite.Win.Logic\USClothesWebSite.Win.Logic.csproj", "{EA3D2C0C-641B-4E45-9588-082D852783A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4} = {6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Deployment", "Deployment", "{62E7382E-EAE7-44F4-AF8A-24337BA6886D}"
+	ProjectSection(SolutionItems) = preProject
+		..\Deployment\DeployRelease.bat = ..\Deployment\DeployRelease.bat
+		..\Deployment\DeployReleaseToLocalServer.bat = ..\Deployment\DeployReleaseToLocalServer.bat
+	EndProjectSection
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "USClothesWebSite.Win.Setup", "USClothesWebSite.Win.Setup\USClothesWebSite.Win.Setup.isproj", "{7D9F8AE4-F4C3-42BE-A925-C3A36F8D6AC1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A76C3E3B-983D-4A3B-901A-3775BBD3B643} = {A76C3E3B-983D-4A3B-901A-3775BBD3B643}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://localhost:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = USClothesWebSite.Web\\USClothesWebSite.Web.csproj
+		SccProjectName1 = USClothesWebSite.Web
+		SccLocalPath1 = USClothesWebSite.Web
+		SccProjectUniqueName2 = USClothesWebSite.BusinessLogic\\USClothesWebSite.BusinessLogic.csproj
+		SccProjectName2 = USClothesWebSite.BusinessLogic
+		SccLocalPath2 = USClothesWebSite.BusinessLogic
+		SccProjectUniqueName3 = USClothesWebSite.DataAccess\\USClothesWebSite.DataAccess.csproj
+		SccProjectName3 = USClothesWebSite.DataAccess
+		SccLocalPath3 = USClothesWebSite.DataAccess
+		SccProjectUniqueName4 = USClothesWebSite.Common\\USClothesWebSite.Common.csproj
+		SccProjectName4 = USClothesWebSite.Common
+		SccLocalPath4 = USClothesWebSite.Common
+		SccProjectUniqueName5 = USClothesWebSite.BusinessLogic.Test\\USClothesWebSite.BusinessLogic.Test.csproj
+		SccProjectName5 = USClothesWebSite.BusinessLogic.Test
+		SccLocalPath5 = USClothesWebSite.BusinessLogic.Test
+		SccProjectUniqueName6 = USClothesWebSite.DTO\\USClothesWebSite.DTO.csproj
+		SccProjectName6 = USClothesWebSite.DTO
+		SccLocalPath6 = USClothesWebSite.DTO
+		SccProjectUniqueName7 = USClothesWebSite.Common.Test\\USClothesWebSite.Common.Test.csproj
+		SccProjectName7 = USClothesWebSite.Common.Test
+		SccLocalPath7 = USClothesWebSite.Common.Test
+		SccProjectUniqueName8 = USClothesWebSite.Test.Common\\USClothesWebSite.Test.Common.csproj
+		SccProjectName8 = USClothesWebSite.Test.Common
+		SccLocalPath8 = USClothesWebSite.Test.Common
+		SccProjectUniqueName9 = USClothesWebSite.Win\\USClothesWebSite.Win.csproj
+		SccProjectName9 = USClothesWebSite.Win
+		SccLocalPath9 = USClothesWebSite.Win
+		SccProjectUniqueName10 = USClothesWebSite.Win.Logic\\USClothesWebSite.Win.Logic.csproj
+		SccProjectName10 = USClothesWebSite.Win.Logic
+		SccLocalPath10 = USClothesWebSite.Win.Logic
+		SccProjectUniqueName11 = USClothesWebSite.Win.Setup\\USClothesWebSite.Win.Setup.isproj
+		SccProjectName11 = USClothesWebSite.Win.Setup
+		SccLocalPath11 = USClothesWebSite.Win.Setup
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BE53C2A-C52A-4F27-9FBA-2B10974CFBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{565A9CBC-659F-4FFC-BCBC-E7794C737DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{565A9CBC-659F-4FFC-BCBC-E7794C737DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{565A9CBC-659F-4FFC-BCBC-E7794C737DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{565A9CBC-659F-4FFC-BCBC-E7794C737DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AEF7303-560B-409B-91E3-3F0B8ED1109E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AEF7303-560B-409B-91E3-3F0B8ED1109E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AEF7303-560B-409B-91E3-3F0B8ED1109E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AEF7303-560B-409B-91E3-3F0B8ED1109E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FC9517-8494-49A8-84AA-6DEC0543A300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FC9517-8494-49A8-84AA-6DEC0543A300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FC9517-8494-49A8-84AA-6DEC0543A300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FC9517-8494-49A8-84AA-6DEC0543A300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D804541-4C77-4993-9B7C-814E2E649ABF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D804541-4C77-4993-9B7C-814E2E649ABF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D804541-4C77-4993-9B7C-814E2E649ABF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D804541-4C77-4993-9B7C-814E2E649ABF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1196977-6D37-4A23-A241-E4CE09AEDC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1196977-6D37-4A23-A241-E4CE09AEDC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1196977-6D37-4A23-A241-E4CE09AEDC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1196977-6D37-4A23-A241-E4CE09AEDC28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A76C3E3B-983D-4A3B-901A-3775BBD3B643}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76C3E3B-983D-4A3B-901A-3775BBD3B643}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76C3E3B-983D-4A3B-901A-3775BBD3B643}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76C3E3B-983D-4A3B-901A-3775BBD3B643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA3D2C0C-641B-4E45-9588-082D852783A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA3D2C0C-641B-4E45-9588-082D852783A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA3D2C0C-641B-4E45-9588-082D852783A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA3D2C0C-641B-4E45-9588-082D852783A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9F8AE4-F4C3-42BE-A925-C3A36F8D6AC1}.Debug|Any CPU.ActiveCfg = SingleImage
+		{7D9F8AE4-F4C3-42BE-A925-C3A36F8D6AC1}.Release|Any CPU.ActiveCfg = SingleImage
+		{7D9F8AE4-F4C3-42BE-A925-C3A36F8D6AC1}.Release|Any CPU.Build.0 = SingleImage
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

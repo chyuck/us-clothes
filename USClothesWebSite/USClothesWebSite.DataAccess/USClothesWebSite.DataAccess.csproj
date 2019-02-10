@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AEF7303-560B-409B-91E3-3F0B8ED1109E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>USClothesWebSite.DataAccess</RootNamespace>
+    <AssemblyName>USClothesWebSite.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DepIC">
+      <HintPath>..\packages\DepIC.1.0.0.0\lib\NET40\DepIC.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Properties\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActionLog.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ActionLogType.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Brand.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DistributorTransfer.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IoCRegistrator.cs" />
+    <Compile Include="Model\ActionLog.cs" />
+    <Compile Include="Model\ActionLogType.cs" />
+    <Compile Include="Model\Brand.cs" />
+    <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\DistributorTransfer.cs" />
+    <Compile Include="Model\IActivatedEntity.cs" />
+    <Compile Include="Model\IEntity.cs" />
+    <Compile Include="Model\IPersistentService.cs" />
+    <Compile Include="Model\ITrackableEntity.cs" />
+    <Compile Include="Model\Order.cs" />
+    <Compile Include="Model\OrderItem.cs" />
+    <Compile Include="Model\Parcel.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductSize.cs" />
+    <Compile Include="Model\Role.cs" />
+    <Compile Include="Model\Session.cs" />
+    <Compile Include="Model\Settings.cs" />
+    <Compile Include="Model\ShoppingCart.cs" />
+    <Compile Include="Model\Size.cs" />
+    <Compile Include="Model\SubCategory.cs" />
+    <Compile Include="Model\USClothesShopEntities.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserRole.cs" />
+    <Compile Include="Order.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderItem.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parcel.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSize.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Role.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Session.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCart.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Size.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategory.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USClothesWebSiteModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USClothesWebSiteModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USClothesWebSiteModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USClothesWebSiteModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USClothesWebSiteModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>USClothesWebSiteModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="USClothesWebSiteModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>USClothesWebSiteModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="USClothesWebSiteModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>USClothesWebSiteModel.edmx</DependentUpon>
+      <LastGenOutput>USClothesWebSiteModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="USClothesWebSiteModel.edmx.diagram">
+      <DependentUpon>USClothesWebSiteModel.edmx</DependentUpon>
+    </None>
+    <None Include="USClothesWebSiteModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>USClothesWebSiteModel.edmx</DependentUpon>
+      <LastGenOutput>USClothesWebSiteModel.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\USClothesWebSite.Common\USClothesWebSite.Common.csproj">
+      <Project>{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}</Project>
+      <Name>USClothesWebSite.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

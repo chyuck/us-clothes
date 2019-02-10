@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a94846fa-0ee1-47e4-9b0e-a1c8c5462bc8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="USClothesWebSite.DTO" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2123/WebServices/AdministrationAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AdministrationAPI.wsdl" MetadataType="Wsdl" ID="9de4afde-ca05-4c92-8566-fa2152888765" SourceId="1" SourceUrl="http://localhost:2123/WebServices/AdministrationAPI.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="AdministrationAPI1.wsdl" MetadataType="Wsdl" ID="52e7d04d-1f71-4be4-bec4-051c43ee004a" SourceId="1" SourceUrl="http://localhost:2123/WebServices/AdministrationAPI.svc?wsdl" />
+    <MetadataFile FileName="AdministrationAPI.xsd" MetadataType="Schema" ID="7742dcae-1185-46c8-91bf-8e3518bc5508" SourceId="1" SourceUrl="http://localhost:2123/WebServices/AdministrationAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="AdministrationAPI1.xsd" MetadataType="Schema" ID="54a0b9c7-b88a-4226-8e9f-c8089c7bd7aa" SourceId="1" SourceUrl="http://localhost:2123/WebServices/AdministrationAPI.svc?xsd=xsd2" />
+    <MetadataFile FileName="AdministrationAPI.disco" MetadataType="Disco" ID="d6aa608b-1e79-4b96-a229-0dc08871e995" SourceId="1" SourceUrl="http://localhost:2123/WebServices/AdministrationAPI.svc?disco" />
+    <MetadataFile FileName="AdministrationAPI2.xsd" MetadataType="Schema" ID="dc8edcd6-8a2a-40a1-b3fb-4f1d861536c6" SourceId="1" SourceUrl="http://localhost:2123/WebServices/AdministrationAPI.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

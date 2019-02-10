@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="82c5b410-58d1-4210-a6dd-b183e9f3467f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="USClothesWebSite.DTO" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2123/WebServices/SecurityAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SecurityAPI32.xsd" MetadataType="Schema" ID="e8a9045c-927f-4bbc-969d-e17ed0a59a5d" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?xsd=xsd3" />
+    <MetadataFile FileName="SecurityAPI.xsd" MetadataType="Schema" ID="054b933b-a757-4c87-b3e6-df1cc9658fed" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?xsd=xsd2" />
+    <MetadataFile FileName="SecurityAPI12.wsdl" MetadataType="Wsdl" ID="85dc1560-fba5-4983-8081-695c18bda93b" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="SecurityAPI1.xsd" MetadataType="Schema" ID="b2d376a4-5e30-4c14-a955-0ba62be9507c" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="SecurityAPI2.xsd" MetadataType="Schema" ID="73707985-20cd-4e46-b147-87db33f69760" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?xsd=xsd0" />
+    <MetadataFile FileName="SecurityAPI.disco" MetadataType="Disco" ID="e2c36d26-8588-44f0-aaa1-042c8b1dcc8a" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?disco" />
+    <MetadataFile FileName="SecurityAPI.wsdl" MetadataType="Wsdl" ID="faf1305a-02ff-4323-aa14-506e9c675897" SourceId="1" SourceUrl="http://localhost:2123/WebServices/SecurityAPI.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

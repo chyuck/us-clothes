@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://usclothes.ru/webservice/logapi" elementFormDefault="qualified" targetNamespace="http://usclothes.ru/webservice/logapi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2123/WebServices/LogAPI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" />
+  <xs:element name="GetActionLogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActionLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" minOccurs="0" name="GetActionLogsResult" nillable="true" type="q1:ArrayOfActionLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

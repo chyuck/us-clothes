@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72FC9517-8494-49A8-84AA-6DEC0543A300}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>USClothesWebSite.BusinessLogic.Test</RootNamespace>
+    <AssemblyName>USClothesWebSite.BusinessLogic.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DepIC">
+      <HintPath>..\packages\DepIC.1.0.0.0\lib\NET40\DepIC.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="..\Properties\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Extensions\SecurityServiceExtensions.cs" />
+    <Compile Include="Mocks\ActionLogMockFactory.cs" />
+    <Compile Include="Mocks\ActionLogTypeMockFactory.cs" />
+    <Compile Include="Mocks\DistributorTransferMockFactory.cs" />
+    <Compile Include="Mocks\HttpServiceMockFactory.cs" />
+    <Compile Include="Mocks\OrderItemMockFactory.cs" />
+    <Compile Include="Mocks\OrderMockFactory.cs" />
+    <Compile Include="Mocks\ParcelMockFactory.cs" />
+    <Compile Include="Mocks\ProductMockFactory.cs" />
+    <Compile Include="Mocks\ProductSizeMockFactory.cs" />
+    <Compile Include="Mocks\SettingsMockFactory.cs" />
+    <Compile Include="Tests\ActionLogServiceTest.cs" />
+    <Compile Include="Tests\BrandServiceTest.cs" />
+    <Compile Include="Tests\CategoryServiceTest.cs" />
+    <Compile Include="Mocks\BrandMockFactory.cs" />
+    <Compile Include="Mocks\CategoryMockFactory.cs" />
+    <Compile Include="Mocks\ContainerMockFactory.cs" />
+    <Compile Include="Mocks\DbSetMock.cs" />
+    <Compile Include="Mocks\EncryptServiceMockFactory.cs" />
+    <Compile Include="Mocks\MockDataInitializer.cs" />
+    <Compile Include="Mocks\PersistentServiceMockFactory.cs" />
+    <Compile Include="Mocks\RoleMockFactory.cs" />
+    <Compile Include="Mocks\SizeMockFactory.cs" />
+    <Compile Include="Mocks\SubCategoryMockFactory.cs" />
+    <Compile Include="Mocks\TimeServiceMockFactory.cs" />
+    <Compile Include="Mocks\UserMockFactory.cs" />
+    <Compile Include="Mocks\UserRoleMockFactory.cs" />
+    <Compile Include="Tests\ConfigurationServiceTest.cs" />
+    <Compile Include="Tests\DatabaseGenerateTest.cs" />
+    <Compile Include="Tests\DistributorTransferServiceTest.cs" />
+    <Compile Include="Tests\ImageServiceTest.cs" />
+    <Compile Include="Tests\OrderServiceTest.cs" />
+    <Compile Include="Tests\ParcelServiceTest.cs" />
+    <Compile Include="Tests\ProductServiceTest.cs" />
+    <Compile Include="Tests\ProductSizeServiceTest.cs" />
+    <Compile Include="Tests\ReportServiceTest.cs" />
+    <Compile Include="Tests\SecurityServiceTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\SettingsServiceTest.cs" />
+    <Compile Include="Tests\SizeServiceTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\USClothesWebSite.BusinessLogic\USClothesWebSite.BusinessLogic.csproj">
+      <Project>{565a9cbc-659f-4ffc-bcbc-e7794c737dd0}</Project>
+      <Name>USClothesWebSite.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.Common\USClothesWebSite.Common.csproj">
+      <Project>{5fe66289-eb4f-460b-b1a2-5efd8d88fa58}</Project>
+      <Name>USClothesWebSite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.DataAccess\USClothesWebSite.DataAccess.csproj">
+      <Project>{8aef7303-560b-409b-91e3-3f0b8ed1109e}</Project>
+      <Name>USClothesWebSite.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.DTO\USClothesWebSite.DTO.csproj">
+      <Project>{77D7A8C8-F9DC-402F-93BF-66F7AB0D5505}</Project>
+      <Name>USClothesWebSite.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.Test.Common\USClothesWebSite.Test.Common.csproj">
+      <Project>{F1196977-6D37-4A23-A241-E4CE09AEDC28}</Project>
+      <Name>USClothesWebSite.Test.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="TestData\testimage.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

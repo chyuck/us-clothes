@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2123/WebServices/ReportAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfParcelReportItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParcelReportItem" nillable="true" type="tns:ParcelReportItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParcelReportItem" nillable="true" type="tns:ArrayOfParcelReportItem" />
+  <xs:complexType name="ParcelReportItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomersPaid" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CustomersPrepaid" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DistributorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistributorSpentOnDelivery" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ExpectedTotalCustomerPaid" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ExpectedTotalProfit" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ParcelName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaserPaid" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaserSpentOnDelivery" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ReceivedDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SentDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TotalCustomersPaid" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalPaid" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalProfit" type="xs:decimal" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="ParcelReportItem" nillable="true" type="tns:ParcelReportItem" />
+  <xs:complexType name="ArrayOfDistributorReportItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DistributorReportItem" nillable="true" type="tns:DistributorReportItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDistributorReportItem" nillable="true" type="tns:ArrayOfDistributorReportItem" />
+  <xs:complexType name="DistributorReportItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DistributorBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DistributorName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DistributorReceived" type="xs:decimal" />
+      <xs:element minOccurs="0" name="DistributorSpent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaserBalance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaserReceived" type="xs:decimal" />
+      <xs:element minOccurs="0" name="PurchaserSpent" type="xs:decimal" />
+      <xs:element minOccurs="0" name="TotalBalance" type="xs:decimal" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="DistributorReportItem" nillable="true" type="tns:DistributorReportItem" />
+</xs:schema>

@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{565A9CBC-659F-4FFC-BCBC-E7794C737DD0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>USClothesWebSite.BusinessLogic</RootNamespace>
+    <AssemblyName>USClothesWebSite.BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DepIC">
+      <HintPath>..\packages\DepIC.1.0.0.0\lib\NET40\DepIC.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Properties\SolutionInfo.cs">
+      <Link>Properties\SolutionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActionLog\ActionLogService.cs" />
+    <Compile Include="ActionLog\IActionLogService.cs" />
+    <Compile Include="Brand\BrandService.cs" />
+    <Compile Include="Brand\BrandServiceException.cs" />
+    <Compile Include="Brand\IBrandService.cs" />
+    <Compile Include="Category\CategoryService.cs" />
+    <Compile Include="Category\CategoryServiceException.cs" />
+    <Compile Include="Category\ICategoryService.cs" />
+    <Compile Include="Configuration\BusinessLogicConfigurationSection.cs" />
+    <Compile Include="Configuration\ConfigurationService.cs" />
+    <Compile Include="Configuration\IConfigurationService.cs" />
+    <Compile Include="DistributorTransfer\DistributorTransferService.cs" />
+    <Compile Include="DistributorTransfer\IDistributorTransferService.cs" />
+    <Compile Include="Dto\DtoCache.cs" />
+    <Compile Include="Dto\DtoService.cs" />
+    <Compile Include="Dto\IDtoCache.cs" />
+    <Compile Include="Dto\IDtoService.cs" />
+    <Compile Include="Extensions\DtoExtensions.cs" />
+    <Compile Include="Extensions\EntityExtensions.cs" />
+    <Compile Include="Extensions\PersistentServiceExtensions.cs" />
+    <Compile Include="Extensions\TrackableEntityExtensions.cs" />
+    <Compile Include="Extensions\UserExtensions.cs" />
+    <Compile Include="Helpers\QueryHelper.cs" />
+    <Compile Include="Http\HttpService.cs" />
+    <Compile Include="Http\IHttpService.cs" />
+    <Compile Include="Image\IImageService.cs" />
+    <Compile Include="Image\ImageService.cs" />
+    <Compile Include="IoCFactory.cs" />
+    <Compile Include="Log\ILogService.cs" />
+    <Compile Include="Log\LogService.cs" />
+    <Compile Include="Notification\INotificationService.cs" />
+    <Compile Include="Notification\NotificationService.cs" />
+    <Compile Include="Order\IOrderService.cs" />
+    <Compile Include="Order\OrderService.cs" />
+    <Compile Include="Order\OrderServiceException.cs" />
+    <Compile Include="Parcel\IParcelService.cs" />
+    <Compile Include="Parcel\ParcelService.cs" />
+    <Compile Include="ProductSize\IProductSizeService.cs" />
+    <Compile Include="ProductSize\ProductSizeService.cs" />
+    <Compile Include="ProductSize\ProductSizeServiceException.cs" />
+    <Compile Include="Product\IProductService.cs" />
+    <Compile Include="Product\ProductService.cs" />
+    <Compile Include="Product\ProductServiceException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\IReportService.cs" />
+    <Compile Include="Report\ReportService.cs" />
+    <Compile Include="Security\IPasswordGeneratorService.cs" />
+    <Compile Include="Security\ISecurityService.cs" />
+    <Compile Include="Security\PasswordGeneratorService.cs" />
+    <Compile Include="Security\SecurityService.cs" />
+    <Compile Include="Security\SecurityServiceException.cs" />
+    <Compile Include="Settings\ISettingsService.cs" />
+    <Compile Include="Settings\SettingsService.cs" />
+    <Compile Include="Size\ISizeService.cs" />
+    <Compile Include="Size\SizeService.cs" />
+    <Compile Include="Size\SizeServiceException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\USClothesWebSite.Common\USClothesWebSite.Common.csproj">
+      <Project>{5FE66289-EB4F-460B-B1A2-5EFD8D88FA58}</Project>
+      <Name>USClothesWebSite.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.DataAccess\USClothesWebSite.DataAccess.csproj">
+      <Project>{8AEF7303-560B-409B-91E3-3F0B8ED1109E}</Project>
+      <Name>USClothesWebSite.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USClothesWebSite.DTO\USClothesWebSite.DTO.csproj">
+      <Project>{77d7a8c8-f9dc-402f-93bf-66f7ab0d5505}</Project>
+      <Name>USClothesWebSite.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Notification\UserCreatedEmailTemplate.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Notification\PasswordResetedEmailTemplate.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4a9ffe65-b06b-45bf-9be4-1e7abaabceb9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="USClothesWebSite.DTO" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2123/WebServices/ProductAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductAPI.wsdl" MetadataType="Wsdl" ID="ec191b29-0405-4dcc-a4b7-af1ee8b068a8" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ProductAPI.disco" MetadataType="Disco" ID="4f22cac1-b035-4873-86fb-b413e042966d" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?disco" />
+    <MetadataFile FileName="ProductAPI1.wsdl" MetadataType="Wsdl" ID="30854e02-b337-4510-8205-34eee2d62f75" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?wsdl" />
+    <MetadataFile FileName="ProductAPI.xsd" MetadataType="Schema" ID="730174ab-694e-4f9e-9412-4cdb9f531c87" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductAPI1.xsd" MetadataType="Schema" ID="a84df46d-e051-4a52-8a67-8fa7c54f125b" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductAPI2.xsd" MetadataType="Schema" ID="91a01119-7f5a-4164-b341-1f740d37b9e1" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProductAPI3.xsd" MetadataType="Schema" ID="11ab17b4-9a28-4a7a-bd9a-fc69a6ecdefc" SourceId="1" SourceUrl="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

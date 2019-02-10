@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="14caeb71-3315-4a02-a08b-5b3ac241a4bc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="USClothesWebSite.DTO" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2123/WebServices/DocumentAPI.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DocumentAPI.wsdl" MetadataType="Wsdl" ID="b62eb3a4-1465-469e-bbff-5c1a6d2c38ca" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?wsdl" />
+    <MetadataFile FileName="DocumentAPI.disco" MetadataType="Disco" ID="890e9813-8cad-4b77-8dc6-ec8318341073" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?disco" />
+    <MetadataFile FileName="DocumentAPI.xsd" MetadataType="Schema" ID="2da2bf84-f7da-4c01-aa54-6fde978533e5" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd2" />
+    <MetadataFile FileName="DocumentAPI1.xsd" MetadataType="Schema" ID="8cd620ac-74de-42cf-a681-d1af6adc83ba" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd3" />
+    <MetadataFile FileName="DocumentAPI2.xsd" MetadataType="Schema" ID="fe8efb7e-84e2-4e27-81c0-f599f117c379" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentAPI3.xsd" MetadataType="Schema" ID="4186055b-c171-4dda-b2d6-5c8863d954f8" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocumentAPI1.wsdl" MetadataType="Wsdl" ID="9b2cd1ae-c5e0-4a44-9cc2-9b4b9b42b752" SourceId="1" SourceUrl="http://localhost:2123/WebServices/DocumentAPI.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

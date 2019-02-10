@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://usclothes.ru/webservice/reportapi" elementFormDefault="qualified" targetNamespace="http://usclothes.ru/webservice/reportapi" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2123/WebServices/ReportAPI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" />
+  <xs:element name="GenerateParcelsReport">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateParcelsReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" minOccurs="0" name="GenerateParcelsReportResult" nillable="true" type="q1:ArrayOfParcelReportItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateDistributorsReport">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateDistributorsReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" minOccurs="0" name="GenerateDistributorsReportResult" nillable="true" type="q2:ArrayOfDistributorReportItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

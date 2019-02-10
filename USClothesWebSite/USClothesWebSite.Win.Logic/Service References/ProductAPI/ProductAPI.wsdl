@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://usclothes.ru/webservice/productapi" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://usclothes.ru/webservice/productapi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://usclothes.ru/webservice/productapi/Imports">
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd0" namespace="http://usclothes.ru/webservice/productapi" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd3" namespace="http://usclothes.ru/dto/errordata" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/ProductAPI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IProductAPI_GetProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProducts" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProducts_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://usclothes.ru/dto/errordata" name="detail" element="q1:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductsByDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsByDate" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductsByDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductsByDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductsByDate_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://usclothes.ru/dto/errordata" name="detail" element="q2:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductSizesByProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSizesByProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductSizesByProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSizesByProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductSizesByProduct_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://usclothes.ru/dto/errordata" name="detail" element="q3:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductSizes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSizes" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductSizes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSizesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_GetProductSizes_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://usclothes.ru/dto/errordata" name="detail" element="q4:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_CreateProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_CreateProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_CreateProduct_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://usclothes.ru/dto/errordata" name="detail" element="q5:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_UpdateProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProduct" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_UpdateProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_UpdateProduct_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://usclothes.ru/dto/errordata" name="detail" element="q6:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_CreateProductSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProductSize" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_CreateProductSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateProductSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_CreateProductSize_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://usclothes.ru/dto/errordata" name="detail" element="q7:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_UpdateProductSize_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductSize" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_UpdateProductSize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProductSizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IProductAPI_UpdateProductSize_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://usclothes.ru/dto/errordata" name="detail" element="q8:ErrorData" />
+  </wsdl:message>
+  <wsdl:portType name="IProductAPI">
+    <wsdl:operation name="GetProducts">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProducts" message="tns:IProductAPI_GetProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductsResponse" message="tns:IProductAPI_GetProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductsErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_GetProducts_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductsByDate">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductsByDate" message="tns:IProductAPI_GetProductsByDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductsByDateResponse" message="tns:IProductAPI_GetProductsByDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductsByDateErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_GetProductsByDate_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSizesByProduct">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductSizesByProduct" message="tns:IProductAPI_GetProductSizesByProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductSizesByProductResponse" message="tns:IProductAPI_GetProductSizesByProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductSizesByProductErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_GetProductSizesByProduct_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSizes">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductSizes" message="tns:IProductAPI_GetProductSizes_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductSizesResponse" message="tns:IProductAPI_GetProductSizes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/GetProductSizesErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_GetProductSizes_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProduct">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/CreateProduct" message="tns:IProductAPI_CreateProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/CreateProductResponse" message="tns:IProductAPI_CreateProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/CreateProductErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_CreateProduct_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProduct">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/UpdateProduct" message="tns:IProductAPI_UpdateProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/UpdateProductResponse" message="tns:IProductAPI_UpdateProduct_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/UpdateProductErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_UpdateProduct_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateProductSize">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/CreateProductSize" message="tns:IProductAPI_CreateProductSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/CreateProductSizeResponse" message="tns:IProductAPI_CreateProductSize_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/CreateProductSizeErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_CreateProductSize_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProductSize">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/UpdateProductSize" message="tns:IProductAPI_UpdateProductSize_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/UpdateProductSizeResponse" message="tns:IProductAPI_UpdateProductSize_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/productapi/IProductAPI/UpdateProductSizeErrorDataFault" name="ErrorDataFault" message="tns:IProductAPI_UpdateProductSize_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

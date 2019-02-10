@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://usclothes.ru/webservice/documentapi" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://usclothes.ru/webservice/documentapi" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://usclothes.ru/webservice/documentapi/Imports">
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd0" namespace="http://usclothes.ru/webservice/documentapi" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd3" namespace="http://usclothes.ru/dto/errordata" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2123/WebServices/DocumentAPI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/USClothesWebSite.DTO" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDocumentAPI_GetParcels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParcels" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetParcels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParcelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetParcels_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://usclothes.ru/dto/errordata" name="detail" element="q1:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateParcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateParcel" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateParcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateParcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateParcel_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://usclothes.ru/dto/errordata" name="detail" element="q2:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateParcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateParcel" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateParcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateParcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateParcel_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://usclothes.ru/dto/errordata" name="detail" element="q3:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrders_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://usclothes.ru/dto/errordata" name="detail" element="q4:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrdersByParcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByParcel" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrdersByParcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersByParcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrdersByParcel_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://usclothes.ru/dto/errordata" name="detail" element="q5:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateOrder_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://usclothes.ru/dto/errordata" name="detail" element="q6:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateOrder_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://usclothes.ru/dto/errordata" name="detail" element="q7:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrderItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItems" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrderItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrderItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetOrderItems_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://usclothes.ru/dto/errordata" name="detail" element="q8:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateOrderItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateOrderItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOrderItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateOrderItem_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://usclothes.ru/dto/errordata" name="detail" element="q9:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateOrderItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderItem" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateOrderItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateOrderItem_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://usclothes.ru/dto/errordata" name="detail" element="q10:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetDistributorTransfers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistributorTransfers" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetDistributorTransfers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistributorTransfersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_GetDistributorTransfers_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://usclothes.ru/dto/errordata" name="detail" element="q11:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateDistributorTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDistributorTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateDistributorTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDistributorTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_CreateDistributorTransfer_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://usclothes.ru/dto/errordata" name="detail" element="q12:ErrorData" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateDistributorTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDistributorTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateDistributorTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDistributorTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDocumentAPI_UpdateDistributorTransfer_ErrorDataFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://usclothes.ru/dto/errordata" name="detail" element="q13:ErrorData" />
+  </wsdl:message>
+  <wsdl:portType name="IDocumentAPI">
+    <wsdl:operation name="GetParcels">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetParcels" message="tns:IDocumentAPI_GetParcels_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetParcelsResponse" message="tns:IDocumentAPI_GetParcels_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetParcelsErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_GetParcels_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateParcel">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateParcel" message="tns:IDocumentAPI_CreateParcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateParcelResponse" message="tns:IDocumentAPI_CreateParcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateParcelErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_CreateParcel_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateParcel">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateParcel" message="tns:IDocumentAPI_UpdateParcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateParcelResponse" message="tns:IDocumentAPI_UpdateParcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateParcelErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_UpdateParcel_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrders" message="tns:IDocumentAPI_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrdersResponse" message="tns:IDocumentAPI_GetOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrdersErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_GetOrders_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrdersByParcel">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrdersByParcel" message="tns:IDocumentAPI_GetOrdersByParcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrdersByParcelResponse" message="tns:IDocumentAPI_GetOrdersByParcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrdersByParcelErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_GetOrdersByParcel_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrder">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateOrder" message="tns:IDocumentAPI_CreateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateOrderResponse" message="tns:IDocumentAPI_CreateOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateOrderErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_CreateOrder_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateOrder" message="tns:IDocumentAPI_UpdateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateOrderResponse" message="tns:IDocumentAPI_UpdateOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateOrderErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_UpdateOrder_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrderItems">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrderItems" message="tns:IDocumentAPI_GetOrderItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrderItemsResponse" message="tns:IDocumentAPI_GetOrderItems_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetOrderItemsErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_GetOrderItems_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOrderItem">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateOrderItem" message="tns:IDocumentAPI_CreateOrderItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateOrderItemResponse" message="tns:IDocumentAPI_CreateOrderItem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateOrderItemErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_CreateOrderItem_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrderItem">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateOrderItem" message="tns:IDocumentAPI_UpdateOrderItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateOrderItemResponse" message="tns:IDocumentAPI_UpdateOrderItem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateOrderItemErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_UpdateOrderItem_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistributorTransfers">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetDistributorTransfers" message="tns:IDocumentAPI_GetDistributorTransfers_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetDistributorTransfersResponse" message="tns:IDocumentAPI_GetDistributorTransfers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/GetDistributorTransfersErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_GetDistributorTransfers_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDistributorTransfer">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateDistributorTransfer" message="tns:IDocumentAPI_CreateDistributorTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateDistributorTransferResponse" message="tns:IDocumentAPI_CreateDistributorTransfer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/CreateDistributorTransferErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_CreateDistributorTransfer_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDistributorTransfer">
+      <wsdl:input wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateDistributorTransfer" message="tns:IDocumentAPI_UpdateDistributorTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateDistributorTransferResponse" message="tns:IDocumentAPI_UpdateDistributorTransfer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://usclothes.ru/webservice/documentapi/IDocumentAPI/UpdateDistributorTransferErrorDataFault" name="ErrorDataFault" message="tns:IDocumentAPI_UpdateDistributorTransfer_ErrorDataFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

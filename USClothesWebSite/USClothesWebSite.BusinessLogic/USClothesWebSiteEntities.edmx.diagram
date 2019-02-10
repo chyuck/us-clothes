@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9ccfb16548a5497ca647c5cb47007297" Name="Diagram1">
+        <EntityTypeShape EntityType="USClothesShopModel.ActionLog" Width="1.5" PointX="6" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.ActionLogType" Width="1.5" PointX="3.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Brand" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Category" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Order" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.OrderItem" Width="1.5" PointX="12.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Product" Width="1.5" PointX="8.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.ProductSize" Width="1.5" PointX="10.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Role" Width="1.5" PointX="3" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Session" Width="1.5" PointX="10.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.ShoppingCart" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.Size" Width="1.5" PointX="10.5" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.SubCategory" Width="1.5" PointX="5.25" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.User" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="USClothesShopModel.UserRole" Width="1.5" PointX="8.25" PointY="16.75" IsExpanded="true" />
+        <AssociationConnector Association="USClothesShopModel.FK_ActionLog_ActionLogType" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ActionLog_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Brand_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Brand_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Product_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Category_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Category_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_SubCategory_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Order_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Order_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_OrderItem_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_OrderItem_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_OrderItem_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_OrderItem_ProductSize" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Product_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Product_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Product_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ProductSize_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ProductSize_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ProductSize_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ProductSize_Size" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ShoppingCart_ProductSize" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Role_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Role_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_UserRole_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_ShoppingCart_Session" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Size_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Size_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_Size_SubCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_SubCategory_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_SubCategory_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_User_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_User_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_UserRole_ChangeUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_UserRole_CreateUser" ManuallyRouted="false" />
+        <AssociationConnector Association="USClothesShopModel.FK_UserRole_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
