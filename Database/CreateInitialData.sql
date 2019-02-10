@@ -7,30 +7,30 @@ GO
 -- User Table --
 
 INSERT INTO [dbo].[User] ([FirstName],[LastName],[Email],[Login],[PasswordHash],[PasswordSalt],[Active],[CreateDate],[ChangeDate],[CreateUserId],[ChangeUserId])
-VALUES (N'Андрей',N'Test','andrey@test.com','chyuck','7FD968BDC1BF0C55CFEC23DE9DE0145E','1B8A40A0C5C7309A457830A7045D1802',1,SYSUTCDATETIME(),SYSUTCDATETIME(),1,1)
+VALUES (N'РђРЅРґСЂРµР№',N'Test','andrey@test.com','chyuck','7FD968BDC1BF0C55CFEC23DE9DE0145E','1B8A40A0C5C7309A457830A7045D1802',1,SYSUTCDATETIME(),SYSUTCDATETIME(),1,1)
 GO
 
 INSERT INTO [dbo].[User] ([FirstName],[LastName],[Email],[Login],[PasswordHash],[PasswordSalt],[Active],[CreateDate],[ChangeDate],[CreateUserId],[ChangeUserId])
-VALUES (N'Гость',N'','','guest','','',1,SYSUTCDATETIME(),SYSUTCDATETIME(),1,1)
+VALUES (N'Р“РѕСЃС‚СЊ',N'','','guest','','',1,SYSUTCDATETIME(),SYSUTCDATETIME(),1,1)
 GO
 
 
 -- Role Table --
 
 INSERT INTO [dbo].[Role] ([Name])
-VALUES (N'Администратор')
+VALUES (N'РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ')
 GO
 
 INSERT INTO [dbo].[Role] ([Name])
-VALUES (N'Закупщик')
+VALUES (N'Р—Р°РєСѓРїС‰РёРє')
 GO
 
 INSERT INTO [dbo].[Role] ([Name])
-VALUES (N'Распространитель')
+VALUES (N'Р Р°СЃРїСЂРѕСЃС‚СЂР°РЅРёС‚РµР»СЊ')
 GO
 
 INSERT INTO [dbo].[Role] ([Name])
-VALUES (N'Продавец')
+VALUES (N'РџСЂРѕРґР°РІРµС†')
 GO
 
 
@@ -72,19 +72,19 @@ GO
 -- ActionLogType Table --
 
 INSERT INTO [dbo].[ActionLogType] ([Name]) 
-VALUES (N'Пользователь создан')
+VALUES (N'РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃРѕР·РґР°РЅ')
 GO
 
 INSERT INTO [dbo].[ActionLogType] ([Name]) 
-VALUES (N'Пользователь изменен')
+VALUES (N'РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ РёР·РјРµРЅРµРЅ')
 GO
 
 INSERT INTO [dbo].[ActionLogType] ([Name]) 
-VALUES (N'Пользователь сменил пароль')
+VALUES (N'РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ СЃРјРµРЅРёР» РїР°СЂРѕР»СЊ')
 GO
 
 INSERT INTO [dbo].[ActionLogType] ([Name]) 
-VALUES (N'Пароль был сброшен для пользователя')
+VALUES (N'РџР°СЂРѕР»СЊ Р±С‹Р» СЃР±СЂРѕС€РµРЅ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ')
 GO
 
 
