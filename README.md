@@ -5,3 +5,5 @@ Client-server application for re-selling clothes
 * SQL Server (database)
 * WCF services(server)
 * WinForms (client)
+
+***Note:*** Application is designed for Russian speaking users, and has properties specific to Russia and USA.
